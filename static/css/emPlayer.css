@@ -1,0 +1,138 @@
+#emPlayer{
+    background-color: #FAFAFA;
+    /*border-style: solid;*/
+    /*border-width: 1px;*/
+    /*border-color: #449d44;*/
+    width: inherit;
+    padding: 5px;
+    margin: auto;
+    position: relative;
+    bottom: 0px;
+    z-index: 1000;
+}
+
+#trackCover{
+    height: 65px;
+    width: 65px;
+}
+
+#playList{
+    background-color: #FAFAFA;
+    padding: 5px;
+    margin: auto;
+}
+
+#loopBtn{
+    border: 0px;
+    height: 18px;
+    width: 18px;
+    background-size: 100%;
+    background-color: #FAFAFA;
+    background-image: url("/static/images/green/UnloopIcon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#playBtn{
+    border: none;
+    height: 18px;
+    width: 18px;
+    background-size: 100%;
+    background-color: #FAFAFA;
+    background-image: url("/static/images/green/PlayIcon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.btn.btn-group.col-xs-5.col-sm-2:hover{
+    background: transparent;
+}
+
+#playBtn:hover, #muteBtn:hover{
+      opacity: 0.65;
+}
+
+#muteBtn{
+    border: none;
+    height: 18px;
+    width: 18px;
+    background-size: 100%;
+    background-color: #FAFAFA;
+    background-image: url("/static/images/green/SpeakerIcon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#listBtn{
+    border: none;
+    height: 18px;
+    width: 18px;
+    background-size: 100%;
+    background-color: #FAFAFA;
+    background-image: url("/static/images/green/ListIcon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#loopBtn:active, #playBtn:active, #muteBtn:active, #listBtn:active{
+    position: relative;
+    top: 2px;;
+}
+
+#searchResult{
+    z-index: 100;
+}
+
+.intro #emPlayer{
+    background-color:#282828;
+    padding: 20px;
+    position: relative;
+    z-index: 1000;
+    width: 70%;
+}
+
+.intro #playBtn{
+    border: none;
+    height: 30px;
+    width: 30px;
+    background-size: 100%;
+    background-color: transparent;
+    background-image: url("/static/images/green/PlayIcon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.intro #muteBtn{
+    border: none;
+    height: 30px;
+    width: 30px;
+    background-size: 100%;
+    background-color: transparent;
+    background-image: url("/static/images/green/SpeakerIcon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.intro #emPlayer .btn-group.col-xs-5.col-sm-2{
+     border: none;
+}
+
+.intro #emPlayer .col-xs-12.col-sm-12{
+    background-color: transparent;
+}
+
+.intro #emPlayer .col-sm-12{
+    background-color: black;
+}
+
+.intro #emPlayer #trackInfo{
+    color: #FAFAFA;
+}
+
+/* .intro #seekBar{
+    background-color: red;
+} */
+
+/* .intro #seekBar{
+    background-color: red;
+} */

@@ -1,0 +1,68 @@
+<div class="row">
+    <div class="col-md-12">
+        <div id="step-content"></div>
+        <div id="new-widget" style="display: none;">
+            <button id="btn-new-widget" class="btn btn-default"><i class="fa fa-pencil-square"></i> More Content</button>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <button id="btn-previous-step" class="btn gray pull-left">Back</button>
+        <button id="btn-next-step" class="btn mint pull-right">Next</button>
+    </div>
+</div>
+
+<div class="modal fade" id="new-widget-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">New Content</h4>
+      </div>
+      <div class="modal-body">
+        <p>What kind of content would you like to add?</p>
+          <select id="new-widget-type">
+              <option value="title">Title</option>
+              <option value="subtitle">Subtitle</option>
+              <option value="text">Paragraph</option>
+              <option value="quote">Quote</option>
+              <option value="audio">Audio Clip</option>
+              <option data-no-value="1" value="song">Song search area</option>
+              <option data-no-value="1" value="save">Playlist save area</option>
+          </select>
+          <div id="data-area">
+          <p>What should it say?</p>
+          <textarea id="new-widget-content" class="edit-widget-ta form-control"></textarea>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn gray" data-dismiss="modal">Close</button>
+        <button type="button" class="btn mint" id="new-widget-add">Add</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="new-playlist-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">New Playlist</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+            <label for="new-playlist-name">Name</label><input id="new-playlist-name" class="form-control" type="text"/>
+        </div>
+          <div class="form-group">
+            <label for="new-playlist-description">Description</label><textarea id="new-playlist-description" class="form-control"></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn gray" data-dismiss="modal">Close</button>
+        <button type="button" class="btn mint" id="new-playlist-add">Add</button>
+      </div>
+    </div>
+  </div>
+</div>

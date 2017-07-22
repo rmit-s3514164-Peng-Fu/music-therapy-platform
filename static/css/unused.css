@@ -1,0 +1,2474 @@
+
+body.orientation .header, body.students .header, body.admin .header {
+    background: transparent
+}
+
+body.orientation .hero.sub-hero {
+    background: url(https://cdn.involvio.com/assets/marketing/hero-orientation-4186274a842dd1ff587fd21ea03a41dc.jpg) no-repeat center bottom
+}
+
+body.students .hero.sub-hero {
+    background: url(https://cdn.involvio.com/assets/marketing/hero-students-d66e8920572b7d58c60f93da8b7759f4.jpg) no-repeat center bottom
+}
+
+body.attendance .hero.sub-hero {
+    background: url(https://cdn.involvio.com/assets/marketing/hero-attendance-9686630d2a69505be982590b0e0ae238.jpg) no-repeat center bottom
+}
+
+body.admin .hero.sub-hero {
+    background: url(https://cdn.involvio.com/assets/marketing/hero-admins-0d4d5f334a2c3f5439f23e8a46c91e5d.jpg) no-repeat center bottom
+}
+
+body.orientation .hero.sub-hero, body.students .hero.sub-hero, body.admin .hero.sub-hero {
+    color: #fff;
+    text-align: center;
+    padding: 60px 0 20px;
+    position: relative;
+    background-size: cover;
+    z-index: 10
+}
+
+@media screen and (min-width: 37.5em) {
+    body.orientation .hero.sub-hero, body.students .hero.sub-hero, body.admin .hero.sub-he {
+        padding: 60px 0 40px
+    }
+}
+
+body.orientation .hero.sub-hero h1, body.students .hero.sub-hero h1, body.admin .hero.sub-he h1 {
+    margin-bottom: 0
+}
+
+body.landing .map {
+    padding: 20px 0;
+    background: #525252;
+    color: #fff;
+    text-align: center;
+    position: relative
+}
+
+@media screen and (min-width: 48em) {
+    body.landing .map {
+        padding: 0
+    }
+}
+
+body.landing .map h1 {
+    width: 100%
+}
+
+@media screen and (min-width: 48em) {
+    body.landing .map h1 {
+        position: absolute;
+        bottom: 70%
+    }
+}
+
+body.landing .map p {
+    font-size: 18px;
+    line-height: 1.58333em;
+    width: 100%
+}
+
+@media screen and (min-width: 48em) {
+    body.landing .map p {
+        font-size: 24px;
+        position: absolute;
+        bottom: 55%
+    }
+}
+
+body.landing .map .map-embed {
+    height: 300px;
+    margin-bottom: 20px;
+    background: url(https://cdn.involvio.com/assets/marketing/map-lg-d8e77e39ce26637d0b51dc2d1d796328.jpg) center center no-repeat;
+    background-size: cover
+}
+
+@media screen and (min-width: 48em) {
+    body.landing .map .map-embed {
+        background-image: url(https://cdn.involvio.com/assets/marketing/map-xl-7815f14ceb806b646e5a3517b8ee16e4.jpg);
+        height: 800px;
+        margin-bottom: 0
+    }
+}
+
+body.landing .process {
+    position: relative;
+    overflow: hidden
+}
+
+body.landing .process .btn-learn {
+    font-size: 14px;
+    margin-top: 20px
+}
+
+body.landing .process .social-links {
+    margin-top: 20px
+}
+
+body.landing .process .social-links li {
+    display: inline-block;
+    margin-right: 30px;
+    float: left
+}
+
+@media screen and (min-width: 48em) {
+    body.landing .process:before {
+        content: " ";
+        display: block;
+        background: #cbcfcf;
+        width: 2px;
+        height: 100%;
+        position: absolute;
+        left: 50%;
+        top: 0;
+        margin-left: -1px;
+        z-index: 0
+    }
+
+    body.landing .process:after {
+        content: " ";
+        display: block;
+        background: #6bbe98;
+        width: 2px;
+        height: 100%;
+        position: fixed;
+        left: 50%;
+        bottom: 50%;
+        margin-left: -1px;
+        z-index: 0;
+        -webkit-transition: bottom 500ms ease-in-out;
+        -moz-transition: bottom 500ms ease-in-out;
+        transition: bottom 500ms ease-in-out
+    }
+
+    body.landing .process.bottom:after {
+        bottom: 0
+    }
+
+    body.landing .process .is-active-section.in .title {
+        color: #6bbe98
+    }
+
+    body.landing .process .is-active-section.in .icon {
+        -webkit-animation-fill-mode: forwards;
+        -moz-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        -webkit-animation-duration: 250ms;
+        -moz-animation-duration: 250ms;
+        animation-duration: 250ms;
+        -webkit-animation-timing-function: ease;
+        -moz-animation-timing-function: ease;
+        animation-timing-function: ease;
+        -webkit-animation-iteration-count: 1;
+        -moz-animation-iteration-count: 1;
+        animation-iteration-count: 1
+    }
+
+    body.landing .process .is-active-section.in .icon {
+        -webkit-animation-name: process-icon-in;
+        -moz-animation-name: process-icon-in;
+        animation-name: process-icon-in
+    }
+
+    body.landing .process .is-active-section.in .icon path {
+        fill: #6bbe98;
+        -webkit-transition: fill 250ms linear;
+        -moz-transition: fill 250ms linear;
+        transition: fill 250ms linear
+    }
+
+    body.landing .process .is-active-section.in .screen img {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0)
+    }
+
+    body.landing .process .is-active-section.out .icon {
+        -webkit-animation-name: process-icon-out;
+        -moz-animation-name: process-icon-out;
+        animation-name: process-icon-out;
+        -webkit-animation-duration: 250ms;
+        -moz-animation-duration: 250ms;
+        animation-duration: 250ms
+    }
+
+    body.landing .process .is-active-section.out .icon path {
+        fill: #cbcfcf;
+        -webkit-transition: fill 250ms linear;
+        -moz-transition: fill 250ms linear;
+        transition: fill 250ms linear
+    }
+
+    body.landing .process .has-sub1 .sub1 {
+        border-color: #6bbe98;
+        -webkit-transform: scale(0.7);
+        -moz-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+        -o-transform: scale(0.7);
+        transform: scale(0.7)
+    }
+
+    body.landing .process .has-sub1 .subscreen1 img {
+        opacity: 1 !important
+    }
+
+    body.landing .process .has-sub2 .sub2 {
+        border-color: #6bbe98;
+        -webkit-transform: scale(0.7);
+        -moz-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+        -o-transform: scale(0.7);
+        transform: scale(0.7)
+    }
+
+    body.landing .process .has-sub2 .subscreen2 img {
+        opacity: 1 !important
+    }
+
+    body.landing .process .has-sub3 .sub3 {
+        border-color: #6bbe98;
+        -webkit-transform: scale(0.7);
+        -moz-transform: scale(0.7);
+        -ms-transform: scale(0.7);
+        -o-transform: scale(0.7);
+        transform: scale(0.7)
+    }
+
+    body.landing .process .has-sub3 .subscreen3 img {
+        opacity: 1 !important
+    }
+}
+
+body.landing .team li {
+    display: inline-block;
+    margin-top: 40px
+}
+
+@media screen and (min-width: 37.5em) {
+    body.landing .team li {
+        width: 40%;
+        margin: 3% 2%
+    }
+}
+
+@media screen and (min-width: 48em) {
+    body.landing .team li {
+        width: 29%;
+        margin: 3% 2%
+    }
+}
+
+body.landing .team img {
+    display: block;
+    border-radius: 100%;
+    border: 3px solid #e6ebef;
+    margin-bottom: 20px;
+    width: 100%
+}
+
+body.landing .team p {
+    margin: 0
+}
+
+body.landing .resources h1 {
+    width: auto
+}
+
+@media screen and (min-width: 37.5em) {
+    body.landing .resources .left {
+        float: left;
+        display: block;
+        margin-right: 2.12766%;
+        width: 40.42553%;
+        margin-left: 8%;
+        text-align: right
+    }
+
+    body.landing .resources .left:last-child {
+        margin-right: 0
+    }
+}
+
+body.landing .resources .btn {
+    width: 200px;
+    margin-top: 20px
+}
+
+@media screen and (min-width: 37.5em) {
+    body.landing .resources .btn {
+        margin: 60px 0 0 8%
+    }
+}
+
+@media screen and (min-width: 48em) {
+    body.landing .resources .btn {
+        margin: 84px 0 0 8%
+    }
+}
+
+body.landing .tour #fomo {
+    position: relative;
+    z-index: 20
+}
+
+body.landing .tour .intro .container {
+    max-width: 1140px
+}
+
+body.landing .tour .orientation, body.landing .tour .engage, body.landing .tour .student {
+    margin: 80px auto 0 auto
+}
+
+body.landing .tour .engage.swap {
+    padding-top: 290px;
+    position: relative
+}
+
+@media screen and (max-width: 480px) {
+    body.landing .tour .engage.swap {
+        padding-top: 260px
+    }
+}
+
+@media screen and (max-width: 375px) {
+    body.landing .tour .engage.swap {
+        padding-top: 200px
+    }
+}
+
+@media screen and (max-width: 320px) {
+    body.landing .tour .engage.swap {
+        padding-top: 170px
+    }
+}
+
+body.landing .tour .orientation .ill {
+    position: relative;
+    margin-right: -30px
+}
+
+body.landing .tour .student .ill {
+    margin-right: 0;
+    margin-top: -100px;
+    margin-bottom: -50px
+}
+
+body.landing .tour .engage .ill {
+    position: absolute;
+    transform: translateX(-50%);
+    top: 0;
+    max-width: 495px;
+    margin: 0 auto
+}
+
+body.landing .tour .orientation .ill.mobile {
+    display: none
+}
+
+@media screen and (max-width: 768px) {
+    body.landing .tour .engage .ill {
+        width: 100%
+    }
+
+    body.landing .tour .orientation .ill {
+        width: 100%;
+        margin-right: 0
+    }
+}
+
+@media screen and (max-width: 30em) {
+    body.landing .tour .orientation .ill {
+        display: none
+    }
+
+    body.landing .tour .orientation .ill.mobile {
+        display: block
+    }
+}
+
+body.landing .tour .orientation .vertical-line, body.landing .tour .engage .vertical-line, body.landing .tour .student .vertical-line {
+    margin: 7px auto 0 auto;
+    width: 2px;
+    height: 30px;
+    background: #BABFBF;
+    content: "";
+    display: block
+}
+
+body.landing .tour .student .vertical-line {
+    margin: 7px auto
+}
+
+body.landing .tour .orientation .horizontal-line, body.landing .tour .engage .horizontal-line, body.landing .tour .student .horizontal-line {
+    width: 75%;
+    max-width: 860px;
+    margin: 0 auto 10px auto;
+    height: 30px;
+    background: transparent;
+    border: 2px solid #BABFBF;
+    border-bottom: 0;
+    border-radius: 16px 16px 0 0;
+    display: block;
+    content: ""
+}
+
+body.landing .tour .student ul {
+    clear: both;
+    margin: 0 auto
+}
+
+body.landing .tour .engage ul li img {
+    -webkit-transition: all 150ms ease-out;
+    -moz-transition: all 150ms ease-out;
+    transition: all 150ms ease-out;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    cursor: pointer
+}
+
+body.landing .tour .engage ul li:hover img {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1)
+}
+
+body.landing .tour .orientation ul li, body.landing .tour .engage ul li, body.landing .tour .student ul li {
+    position: relative;
+    padding: 0 1em;
+    width: 25%;
+    float: left
+}
+
+body.landing .tour .student .vertical-line {
+    display: none
+}
+
+body.landing .tour .student ul li {
+    margin-right: auto;
+    margin-left: auto;
+    width: 50%
+}
+
+body.landing .tour .engage ul.student-features li h2 {
+    font-size: 17px
+}
+
+body.landing .tour .engage ul.student-features li {
+    margin-bottom: 30px
+}
+
+@media screen and (max-width: 1034px) {
+    body.landing .tour .engage ul.student-features li {
+        padding: 0 0.5em
+    }
+
+    body.landing .tour .engage ul.student-features li h2 {
+        font-size: 16px
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    body.landing .tour .engage ul.student-features li {
+        width: 50%
+    }
+
+    body.landing .tour .engage ul.student-features li p {
+        max-width: 200px
+    }
+}
+
+body.landing .tour .student ul li.first:before {
+    content: "";
+    display: block;
+    background: url(https://cdn.involvio.com/assets/marketing/line-tl-4e2dac8d294c1510e8ed82ec05ad721d.svg) no-repeat 0 0;
+    width: 120px;
+    height: 44px;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    -webkit-transform: translate(-180%, 60px) scale(1);
+    -moz-transform: translate(-180%, 60px) scale(1);
+    -ms-transform: translate(-180%, 60px) scale(1);
+    -o-transform: translate(-180%, 60px) scale(1);
+    transform: translate(-180%, 60px) scale(1)
+}
+
+body.landing .tour .student ul li.last:before {
+    content: "";
+    display: block;
+    background: url(https://cdn.involvio.com/assets/marketing/line-tr-9a1ccce65f6b1e48c99db65e58d8c993.svg) no-repeat 0 0;
+    width: 120px;
+    height: 44px;
+    position: absolute;
+    right: 100%;
+    top: 0;
+    -webkit-transform: translate(180%, 60px) scale(1);
+    -moz-transform: translate(180%, 60px) scale(1);
+    -ms-transform: translate(180%, 60px) scale(1);
+    -o-transform: translate(180%, 60px) scale(1);
+    transform: translate(180%, 60px) scale(1)
+}
+
+body.landing .tour .student ul:last-of-type li.first:before {
+    background: url(https://cdn.involvio.com/assets/marketing/line-bl-4f16371b7d22cfa8356317786797d927.svg) no-repeat 0 0;
+    -webkit-transform: translate(-180%, 20px) scale(1);
+    -moz-transform: translate(-180%, 20px) scale(1);
+    -ms-transform: translate(-180%, 20px) scale(1);
+    -o-transform: translate(-180%, 20px) scale(1);
+    transform: translate(-180%, 20px) scale(1)
+}
+
+body.landing .tour .student ul:last-of-type li.last:before {
+    background: url(https://cdn.involvio.com/assets/marketing/line-br-04645a34e1a501ccbc3dea5ff7ed6786.svg) no-repeat 0 0;
+    -webkit-transform: translate(180%, 20px) scale(1);
+    -moz-transform: translate(180%, 20px) scale(1);
+    -ms-transform: translate(180%, 20px) scale(1);
+    -o-transform: translate(180%, 20px) scale(1);
+    transform: translate(180%, 20px) scale(1)
+}
+
+@media screen and (max-width: 768px) {
+    body.landing .tour .student ul li.first, body.landing .tour .student ul li.first h2 {
+        margin-left: 0;
+        text-align: left
+    }
+
+    body.landing .tour .student ul li.last, body.landing .tour .student ul li.last h2 {
+        margin-right: 0;
+        text-align: right
+    }
+}
+
+@media screen and (max-width: 37.5em) {
+    body.landing .tour .student .ill {
+        width: 80%;
+        margin: 10px auto
+    }
+
+    body.landing .tour .student .vertical-line {
+        display: block
+    }
+
+    body.landing .tour .student ul li.first:before, body.landing .tour .student ul li.last:before {
+        display: none
+    }
+
+    body.landing .tour .student ul li.first, body.landing .tour .student ul li.first h2, body.landing .tour .student ul li.last, body.landing .tour .student ul li.last h2 {
+        margin: 20px auto;
+        text-align: center
+    }
+}
+
+body.landing .tour .orientation ul li.line:after, body.landing .tour .engage ul li.line:after, body.landing .tour .student ul li.line:after {
+    position: absolute;
+    top: -40px;
+    right: auto;
+    bottom: auto;
+    left: 50%;
+    width: 2px;
+    height: 30px;
+    margin-left: -1px;
+    background: #BABFBF;
+    content: "";
+    display: block
+}
+
+body.landing .tour .orientation ul li .icon, body.landing .tour .orientation ul li h2, body.landing .tour .orientation ul li p, body.landing .tour .engage ul li .icon, body.landing .tour .engage ul li h2, body.landing .tour .engage ul li p, body.landing .tour .student ul li .icon, body.landing .tour .student ul li h2, body.landing .tour .student ul li p {
+    opacity: 1 !important;
+    text-align: center;
+    margin: 0 auto
+}
+
+body.landing .tour .orientation ul li .icon, body.landing .tour .engage ul li .icon {
+    max-width: 100px
+}
+
+body.landing .tour .student ul li .icon {
+    max-width: 115px;
+    z-index: 3;
+    position: relative
+}
+
+body.landing .tour .orientation ul li h2, body.landing .tour .engage ul li h2, body.landing .tour .student ul li h2 {
+    display: block;
+    margin: 10px auto;
+    font-size: 20px;
+    line-height: 25px
+}
+
+body.landing .tour .student ul li h2 {
+    max-width: 140px
+}
+
+body.landing .tour .orientation ul li p, body.landing .tour .engage ul li p, body.landing .tour .student ul li p {
+    display: block;
+    font-size: 14px;
+    line-height: 22px
+}
+
+@media screen and (max-width: 37.5em) {
+    body.landing .tour .orientation, body.landing .tour .engage, body.landing .tour .student {
+        margin: 40px auto 0 auto
+    }
+
+    body.landing .tour .orientation .horizontal-line, body.landing .tour .engage .horizontal-line, body.landing .tour .student .horizontal-line {
+        width: 100%
+    }
+
+    body.landing .tour .orientation ul li .icon, body.landing .tour .engage ul li .icon, body.landing .tour .student ul li .icon {
+        width: 100%
+    }
+
+    body.landing .tour .orientation ul li h2, body.landing .tour .engage ul li h2, body.landing .tour .student ul li h2 {
+        font-size: 16px;
+        line-height: 20px
+    }
+
+    body.landing .tour .orientation ul li, body.landing .tour .engage ul li, body.landing .tour .student ul li {
+        width: 50%;
+        margin-bottom: 30px
+    }
+
+    body.landing .tour .orientation ul li.line:after, body.landing .tour .engage ul li.line:after, body.landing .tour .student ul li.line:after {
+        display: none
+    }
+}
+
+@media screen and (max-width: 37.5em) {
+    body.landing .tour .orientation ul li, body.landing .tour .engage ul li, body.landing .tour .student ul li, body.landing .tour .engage ul.student-features li {
+        width: 100%;
+        float: none
+    }
+}
+
+/*LOGIN*/
+body.landing #downloadApp {
+    max-width: 800px
+}
+
+body.landing #downloadApp p {
+    text-align: center
+}
+
+body.landing #downloadApp .btn {
+    margin: 10px;
+    position: relative;
+    color: #fff
+}
+
+body.landing #downloadApp .btn:hover {
+    color: #565a5f !important
+}
+
+body.landing #downloadApp .btn.has-i {
+    padding-left: 40px
+}
+
+@media screen and (min-width: 48em) {
+    body.landing #downloadApp .btn {
+        width: 180px;
+        margin: 0 10px
+    }
+}
+
+@media screen and (min-width: 60em) {
+    body.landing #downloadApp .btn {
+        width: 210px
+    }
+}
+
+body.landing #downloadApp .btn i {
+    margin-right: 1em;
+    font-size: 1.25em;
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    transform: translate(0, -50%)
+}
+
+body.landing .hand {
+    overflow: hidden;
+    background: #fff url(https://cdn.involvio.com/assets/marketing/img-hand-real-2657324112931fbce543d673ca1b968f.jpg);
+    background-size: 1273px 1052px;
+    background-position: 50% bottom;
+    background-repeat: no-repeat;
+    height: 1072px
+}
+
+body.landing.attendance .video {
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 40px
+}
+
+body.landing.attendance .hand {
+    overflow: hidden;
+    background: #fff url(https://cdn.involvio.com/assets/marketing/img-hand-scanner-0491cdade1d53d3a426c38ffbaa3b3a9.jpg);
+    background-size: 1280px 1140px;
+    background-position: 50% bottom;
+    background-repeat: no-repeat;
+    height: 1165px
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    body.landing .hand {
+        overflow: hidden;
+        background: #fff url(https://cdn.involvio.com/assets/marketing/img-hand-real@2x-ba3917bff368b85496d7288e4607fcda.jpg);
+        background-size: 1273px 1052px;
+        background-position: 50% bottom;
+        background-repeat: no-repeat;
+        height: 1072px
+    }
+
+    body.landing.attendance .hand {
+        overflow: hidden;
+        background: #fff url(https://cdn.involvio.com/assets/marketing/img-hand-scanner@2x-a68cd2fac6552bcebfb41f508c61273d.jpg);
+        background-size: 1280px 1140px;
+        background-position: 50% bottom;
+        background-repeat: no-repeat;
+        height: 1165px
+    }
+}
+
+body.landing .hand .container {
+    position: initial
+}
+
+body.landing .hand .left {
+    padding-right: 275px;
+    text-align: right
+}
+
+body.landing .hand .right {
+    padding-left: 275px;
+    text-align: left
+}
+
+body.landing .hand .features {
+    padding: 30px 0
+}
+
+body.landing .hand .features li svg {
+    -webkit-transition: all 150ms ease-out;
+    -moz-transition: all 150ms ease-out;
+    transition: all 150ms ease-out;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    cursor: pointer
+}
+
+body.landing .hand .features li:hover svg {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1)
+}
+
+body.landing .hand .features li {
+    padding-right: 20px;
+    cursor: pointer;
+    margin-bottom: 30px
+}
+
+body.landing .hand .right .features li {
+    padding-right: 0;
+    padding-left: 20px
+}
+
+body.landing .hand .features li:hover svg, body.landing .hand .features li:hover h4, body.landing .hand .features li:hover p {
+    -webkit-transition: all 250ms ease;
+    -moz-transition: all 250ms ease;
+    transition: all 250ms ease;
+    opacity: 0.7
+}
+
+body.landing .hand .features li .img-mask {
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    max-width: 243px;
+    max-height: 430px;
+    position: absolute;
+    top: 402px;
+    left: 50%;
+    right: auto;
+    cursor: none;
+    pointer-events: none;
+    overflow: hidden
+}
+
+body.landing.attendance .hand .features li .img-mask {
+    top: 302px
+}
+
+body.landing .hand .features li .img-mask img.screen {
+    -webkit-transition: all 250ms ease;
+    -moz-transition: all 250ms ease;
+    transition: all 250ms ease;
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    max-width: 243px;
+    max-height: 430px;
+    opacity: 0
+}
+
+body.landing .hand .features li.active .img-mask img.screen {
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -o-transform: translateX(0%);
+    transform: translateX(0%);
+    opacity: 1
+}
+
+body.landing .hand .features li.active {
+    border-right: 2px solid #6bbe98
+}
+
+body.landing .hand .right .features li.active {
+    border-left: 2px solid #6bbe98;
+    border-right: none
+}
+
+body.landing .hand .features li img, body.landing .hand .features li svg {
+    max-width: 30px;
+    max-height: 30px
+}
+
+body.landing .hand .features li svg {
+    width: 30px;
+    height: 30px
+}
+
+body.landing .hand .features li.active .st0 {
+    fill: #6BBE99
+}
+
+body.landing .hand .features h4 {
+    margin-top: 16px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #43484D
+}
+
+body.landing .hand .features p {
+    font-size: 12px;
+    line-height: 22px;
+    color: #8D97A0
+}
+
+body.landing .colors ul {
+    margin: 35px auto 0 auto;
+    display: inline-block
+}
+
+body.landing .colors ul li {
+    float: left;
+    display: inline-block;
+    width: 20%;
+    padding: 0 1em;
+    text-align: center
+}
+
+body.landing .colors ul li img {
+    max-width: 120px;
+    margin: 0 auto
+}
+
+@media screen and (max-width: 375px) {
+    body.landing .colors ul li {
+        padding: 0 0.5em
+    }
+}
+
+@media screen and (max-width: 876px) {
+    body.landing .hand, body.landing.attendance .hand {
+        background: #ffffff;
+        height: auto
+    }
+
+    body.landing .hand li {
+        padding: 0;
+        height: 100px
+    }
+
+    body.landing .hand .features li.active {
+        border: none !important
+    }
+
+    body.landing .hand .features li.active img.screen {
+        display: none
+    }
+
+    body.landing .hand .left {
+        text-align: center;
+        padding-right: 40px
+    }
+
+    body.landing .hand .right {
+        text-align: center;
+        padding-left: 40px
+    }
+
+    body.landing .colors ul li img {
+        width: 100%
+    }
+}
+
+@media screen and (max-width: 48em) {
+    body.landing .hand p {
+        margin-bottom: 30px
+    }
+
+    body.landing .hand .left, body.landing .hand .right, body.landing .hand .features {
+        padding: 0
+    }
+}
+
+body.landing .colors ul li:last-child {
+    margin-right: 0
+}
+
+body.landing.free-consultation .row {
+    margin-top: 0
+}
+
+body.landing.free-consultation .intro {
+    background: #fff
+}
+
+body.landing.free-consultation.thankyou .bg-grey .intro {
+    background: inherit
+}
+
+body.landing.free-consultation .intro .container {
+    width: 60%
+}
+
+body.landing.free-consultation.thankyou .bg-grey .intro .container {
+    width: inherit
+}
+
+body.landing.free-consultation .intro .container p {
+    width: 60%;
+    margin-bottom: 40px
+}
+
+body.landing.free-consultation.thankyou .bg-grey .intro .container p {
+    width: inherit;
+    margin-bottom: inherit
+}
+
+@media screen and (max-width: 37.5em) {
+    body.landing.free-consultation .intro .container {
+        width: 88%
+    }
+
+    body.landing.free-consultation form .input input + label, body.landing.free-consultation form .input label {
+        font-size: 11px !important;
+        text-align: left
+    }
+
+    body.landing.free-consultation .intro .container p {
+        width: 90%;
+        margin-bottom: 20px
+    }
+}
+
+body.landing .thankyou-wufoo .intro {
+    background: #ffffff;
+    padding: 100px 0 100px
+}
+
+body.landing.plans .footer .top h1, body.landing.plans .footer .top ul {
+    display: none
+}
+
+body.landing .plans {
+    background: url(../images/grass.jpg) no-repeat center center;
+    background-size: cover;
+    color: #fff
+}
+
+@media screen and (min-width: 35.5em) {
+    body.landing .plans {
+        background-image: url(../images/grass.jpg)
+    }
+}
+
+@media screen and (min-width: 60em) {
+    body.landing .plans {
+        background-image: url(../images/grass.jpg);
+        background-attachment: fixed
+    }
+}
+
+@media screen and (min-width: 68.75em) {
+    body.landing .plans {
+        background-image: url(../images/grass.jpg)
+    }
+}
+
+body.landing .plans ul {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 40px
+}
+
+body.landing .plans li {
+    text-align: center;
+    margin-bottom: 20px
+}
+
+@media screen and (min-width: 48em) {
+    body.landing .plans li {
+        float: left;
+        display: block;
+        margin-right: 2.12766%;
+        width: 47.87234%;
+        margin-bottom: 40px
+    }
+
+    body.landing .plans li:last-child {
+        margin-right: 0
+    }
+}
+
+body.landing .plans li .btn {
+    width: 100%;
+    font-weight: 600
+}
+
+body.landing .plans .top {
+    background: #6bbe98;
+    padding: 24px 20px;
+    height: 100%
+}
+
+body.landing .plans .bottom {
+    background: #fff;
+    padding: 24px 20px
+}
+
+body.landing .plans h2, body.landing .plans h3 {
+    font-weight: 600;
+    margin: 18px 0 18px
+}
+
+body.landing .plans p {
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 12px
+}
+
+body.landing .plans .support {
+    color: #565a5f;
+    background: #fff;
+    text-align: center;
+    padding: 24px 20px;
+    min-height: 260px
+}
+
+@media screen and (min-width: 48em) {
+    body.landing .plans .support {
+        float: left;
+        display: block;
+        margin-right: 2.12766%
+    }
+
+    body.landing .plans .support:last-child {
+        margin-right: 0
+    }
+}
+
+body.landing .plans .support p {
+    margin: 1em 0 1em;
+    color: #7e8a94
+}
+
+body.landing .plans .support .btn {
+    width: 30%;
+    margin: 10px 10px 0;
+    font-weight: 600
+}
+
+body.landing .feature-table, body.landing .admin-features, body.landing .testimonials, body.landing .colors, body.landing .hand {
+    position: relative;
+    padding: 80px 0;
+    text-align: center;
+    z-index: 1
+}
+
+@media screen and (max-width: 37.5em) {
+    body.landing .feature-table, body.landing .admin-features, body.landing .testimonials, body.landing .colors, body.landing .hand {
+        padding: 40px 0
+    }
+}
+
+body.landing .feature-container {
+    position: relative
+}
+
+body.landing .feature-table .container {
+    max-width: 1102px
+}
+
+body.landing .feature-table p {
+    max-width: 700px;
+    margin: 0 auto
+}
+
+body.landing .feature-table table.rtable {
+    background: #fff;
+    margin-top: 80px;
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 2px solid #BABFBF;
+    border-radius: 4px
+}
+
+body.landing .feature-table table.rtable, body.landing .feature-table table.rtable--flip tbody {
+    -webkit-overflow-scrolling: touch;
+    background: radial-gradient(left, ellipse, rgba(0, 0, 0, 0.2) 0%, transparent 75%) 0 center, radial-gradient(right, ellipse, rgba(0, 0, 0, 0.2) 0%, transparent 75%) 100% center;
+    background-size: 10px 100%, 10px 100%;
+    background-attachment: scroll, scroll;
+    background-repeat: no-repeat
+}
+
+body.landing .feature-table table.rtable td:first-child, body.landing .feature-table table.rtable--flip tbody tr:first-child {
+    background-image: linear-gradient(to right, #fff 50%, rgba(255, 255, 255, 0) 100%);
+    background-repeat: no-repeat;
+    background-size: 20px 100%
+}
+
+body.landing .feature-table table.rtable td:last-child, body.landing .feature-table table.rtable--flip tbody tr:last-child {
+    background-image: linear-gradient(to left, #fff 50%, rgba(255, 255, 255, 0) 100%);
+    background-repeat: no-repeat;
+    background-position: 100% 0;
+    background-size: 20px 100%
+}
+
+body.landing .feature-table table.rtable th {
+    font-size: 14px;
+    text-align: left
+}
+
+body.landing .feature-table table.rtable th, body.landing .feature-table table.rtable td {
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #BABFBF;
+    line-height: 22px;
+    border-bottom: none;
+    border-left: none
+}
+
+body.landing .feature-table table.rtable th:first-child, body.landing .feature-table table.rtable td:first-child {
+    border-top: none;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 20px;
+    color: #43484D;
+    border-bottom: 1px solid #BABFBF;
+    text-align: center !important
+}
+
+body.landing .feature-table table.rtable th.no-border-bottom {
+    border-bottom: none
+}
+
+body.landing .feature-table table.rtable th:nth-child(2), body.landing .feature-table table.rtable td:nth-child(2) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    height: 100px;
+    vertical-align: middle;
+    text-align: center !important
+}
+
+body.landing .feature-table table.rtable--flip {
+    display: flex;
+    overflow: hidden;
+    background: #fff
+}
+
+body.landing .feature-table table.rtable--flip thead {
+    display: flex;
+    flex-shrink: 0;
+    min-width: min-content
+}
+
+body.landing .feature-table table.rtable--flip tbody {
+    display: flex;
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden
+}
+
+body.landing .feature-table table.rtable--flip tr {
+    display: flex;
+    flex-direction: column;
+    min-width: min-content;
+    flex-shrink: 0
+}
+
+body.landing .feature-table table.rtable--flip tr:last-child td {
+    border-right: none
+}
+
+body.landing .feature-table table.rtable--flip tr.involvio {
+    background-color: #F3F9F7
+}
+
+body.landing .feature-table table.rtable--flip td, body.landing .feature-table table.rtable--flip th {
+    display: block;
+    min-width: 220px
+}
+
+body.landing .feature-table table.rtable--flip td {
+    background-image: none !important;
+    border-left: 0
+}
+
+body.landing .feature-table table.rtable--flip th:not(:last-child), body.landing .feature-table table.rtable--flip td:not(:last-child) {
+    border-bottom: 0
+}
+
+body.landing .feature-table table td.blur {
+    -webkit-filter: blur(10px);
+    filter: blur(10px);
+    filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='10')
+}
+
+body.landing .feature-request-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    top: 0px
+}
+
+body.landing .feature-request-container .feature-request-modal {
+    width: 68%;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding: 60px;
+    background: white;
+    -webkit-box-shadow: 0px 0px 50px 4px rgba(196, 196, 196, 0.5);
+    -moz-box-shadow: 0px 0px 50px 4px rgba(196, 196, 196, 0.5);
+    box-shadow: 0px 0px 50px 4px rgba(196, 196, 196, 0.5)
+}
+
+body.landing .feature-request-container .feature-request-modal .row {
+    margin-top: 0
+}
+
+body.landing .feature-request-container .feature-request-modal h1 {
+    margin-bottom: 0.25em
+}
+
+body.landing .feature-request-container .feature-request-modal p, body.landing.free-consultation .intro p {
+    color: #BABFBF;
+    width: 75%;
+    font-size: 14px
+}
+
+body.landing .free-consultation-form {
+    margin-top: 80px
+}
+
+body.landing.thankyou .free-consultation-form {
+    margin-top: 120px
+}
+
+body.landing.free-consultation .intro p {
+    margin: 0 auto
+}
+
+body.landing.thankyou .free-consultation-form header h1 {
+    margin-bottom: 0.5em
+}
+
+body.landing.thankyou .free-consultation-form header img {
+    margin-bottom: 30px
+}
+
+body.landing .feature-request-container .feature-request-modal .btn, body.landing.free-consultation form .btn {
+    width: inherit;
+    margin-top: 20px;
+    padding: 16px 70px;
+    font-size: 14px
+}
+
+body.landing .feature-request-container .feature-request-modal .btn.dull {
+    border-color: #BABFBF
+}
+
+body.landing .feature-request-container .feature-request-modal .btn.dull:hover {
+    background-color: #BABFBF
+}
+
+body.landing .feature-request-container .feature-request-modal .btn:first-child {
+    margin-right: 40px
+}
+
+body.landing .feature-request-container .feature-request-modal .input input, body.landing.free-consultation form .input input, body.landing.free-consultation form .input textarea {
+    border-color: #BABFBF;
+    color: #686B71;
+    font-size: 14px
+}
+
+body.landing .feature-request-container .feature-request-modal .input input + label, body.landing.free-consultation form .input input + label, body.landing.free-consultation form .input label, body.landing.free-consultation form .input textarea + label {
+    color: #686B71;
+    font-size: 14px
+}
+
+body.landing .feature-request-container .feature-request-modal .input input + label + i, body.landing.free-consultation .input input + label + i {
+    color: #686B71
+}
+
+body.landing .feature-request-container .feature-request-modal .input input:focus, body.landing.free-consultation form .input input:focus, body.landing.free-consultation form .input textarea:focus {
+    border-color: #6bbe98
+}
+
+body.landing .feature-request-container .feature-request-modal .input input:focus + label + i, body.landing.free-consultation .input input:focus + label + i {
+    color: #6bbe98
+}
+
+body.landing .feature-request-container .feature-request-modal .input input:focus + label, body.landing.free-consultation form .input input:focus + label, body.landing.free-consultation form .input textarea:focus + label {
+    color: #6bbe98
+}
+
+@media screen and (max-width: 876px) {
+    body.landing .feature-table table.rtable {
+        margin-top: 50px
+    }
+
+    body.landing .feature-table table.rtable--flip td, body.landing .feature-table table.rtable--flip th {
+        min-width: initial
+    }
+
+    body.landing .feature-table table.rtable th, body.landing .feature-table table.rtable td {
+        font-size: 12px
+    }
+
+    body.landing .feature-request-container .feature-request-modal {
+        margin-top: 80px;
+        width: 90%;
+        padding: 30px
+    }
+
+    body.landing .feature-request-container .feature-request-modal h1, body.landing .feature-request-container .feature-request-modal p {
+        width: 100%
+    }
+
+    body.landing .feature-request-container .feature-request-modal .row {
+        margin-top: 0px
+    }
+
+    body.landing .feature-request-container .feature-request-modal .btn {
+        width: 100%;
+        padding: 16px 0;
+        float: none
+    }
+
+    body.landing .feature-request-container .feature-request-modal .btn:first-child {
+        margin-bottom: 20px
+    }
+}
+
+@media screen and (max-width: 37.5em) {
+    body.landing .feature-table table.rtable {
+        margin-bottom: 130px
+    }
+
+    body.landing .feature-table table.rtable th:nth-child(2), body.landing .feature-table table.rtable td:nth-child(2) {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        height: 90px
+    }
+}
+
+body.landing .admin-features .container {
+    max-width: 1200px
+}
+
+body.landing .admin-features h3 {
+    margin: 80px auto 20px auto;
+    position: relative;
+    z-index: 1
+}
+
+body.landing .admin-features h3:before {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    margin-top: -1px;
+    background: #F1F3F3;
+    content: "";
+    height: 2px;
+    z-index: -1
+}
+
+body.landing .admin-features h3:after {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 50%;
+    margin-left: -110px;
+    margin-top: -20px;
+    width: 220px;
+    height: 40px;
+    background: #fff;
+    content: "";
+    z-index: -1
+}
+
+body.landing .admin-features .tools-list-filters {
+    margin-bottom: 100px
+}
+
+@media screen and (max-width: 37.5em) {
+    body.landing .admin-features .tools-list-filters {
+        margin-bottom: 30px
+    }
+}
+
+body.landing .admin-features .tools-list-filters .btn {
+    font-size: 14px;
+    margin-right: 15px
+}
+
+@media screen and (max-width: 768px) {
+    body.landing .admin-features .tools-list-filters .btn {
+        font-size: 11px;
+        padding: 13px;
+        margin-right: 10px
+    }
+}
+
+@media screen and (max-width: 37.5em) {
+    body.landing .admin-features .tools-list-filters .btn {
+        display: block;
+        margin-bottom: 10px;
+        width: 100%
+    }
+}
+
+body.landing .admin-features .tools-list-filters .btn.active {
+    background: #6bbe98;
+    color: #fff
+}
+
+body.landing .admin-features .tools-list-filters .btn:last-of-type {
+    margin-right: 0
+}
+
+body.landing .admin-features .tools-list .item {
+    padding: 15px 15px 0 15px;
+    position: relative;
+    min-height: 200px;
+    height: 260px;
+    text-align: center;
+    width: 25%;
+    margin-bottom: 60px
+}
+
+@media screen and (max-width: 876px) {
+    body.landing .admin-features .tools-list .item {
+        width: 33.33%;
+        padding: 0 10px
+    }
+}
+
+@media screen and (max-width: 37.5em) {
+    body.landing .admin-features .tools-list .item {
+        width: 50%;
+        margin-bottom: 30px;
+        padding: 0 10px
+    }
+
+    body.landing .admin-features h3 {
+        margin-top: 30px
+    }
+
+    body.landing .admin-features h3:after {
+        width: 160px;
+        margin-left: -80px
+    }
+
+    body.landing .feature-table, body.landing .admin-features, body.landing .testimonials {
+        padding: 40px 0
+    }
+}
+
+@media screen and (max-width: 320px) {
+    body.landing .admin-features .tools-list .item {
+        height: 230px;
+        width: 100%
+    }
+}
+
+body.landing .admin-features .tools-list .item h4 {
+    margin: 20px 0;
+    font-size: 20px;
+    color: #43484D
+}
+
+@media screen and (max-width: 460px) {
+    body.landing .admin-features .tools-list .item h4 {
+        font-size: 16px
+    }
+}
+
+body.landing .admin-features .tools-list .item p {
+    width: 80%;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 22px;
+    color: #86939E
+}
+
+body.landing .testimonials .container {
+    max-width: 1600px
+}
+
+body.landing .testimonials ul li {
+    position: relative;
+    text-align: left;
+    padding: 30px;
+    display: block;
+    width: 70%;
+    margin: 40px auto 0;
+    background: #fff;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 22px
+}
+
+@media screen and (min-width: 48em) {
+    body.landing .testimonials ul li {
+        float: left;
+        display: block;
+        margin-right: 2.12766%;
+        width: 31.91489%;
+        color: #86939E;
+        font-size: 16px;
+        line-height: 25px
+    }
+
+    body.landing .testimonials ul li:last-child {
+        margin-right: 0
+    }
+}
+
+@media screen and (max-width: 37.5em) {
+    body.landing .testimonials ul li {
+        width: 100%
+    }
+}
+
+body.landing .testimonials ul li figure {
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+    float: left;
+    overflow: hidden;
+    margin-right: 15px
+}
+
+body.landing .testimonials ul li figure img {
+    width: 100%;
+    display: block
+}
+
+body.landing .testimonials ul li .name {
+    padding-top: 2px;
+    color: #43484D;
+    line-height: 20px
+}
+
+body.landing .testimonials ul li .bio {
+    display: block;
+    margin-top: 20px
+}
+
+body.landing .testimonials ul li .icon-twitter {
+    position: absolute;
+    top: 28px;
+    right: 30px;
+    color: #5AA8DF;
+    font-size: 25px
+}
+
+@media screen and (min-width: 60em) {
+    body.landing .students-dark {
+        min-height: 634px
+    }
+}
+
+body.landing .students-dark h1 {
+    margin-bottom: 30px
+}
+
+body.landing .students-dark h1.sm {
+    max-width: 600px;
+    margin: 0 auto 30px
+}
+
+body.landing .students-dark .btn {
+    margin: 10px;
+    position: relative
+}
+
+body.landing .students-dark .btn.has-i {
+    padding-left: 40px
+}
+
+@media screen and (min-width: 48em) {
+    body.landing .students-dark .btn {
+        width: 180px;
+        margin: 0 10px
+    }
+}
+
+@media screen and (min-width: 60em) {
+    body.landing .students-dark .btn {
+        width: 210px
+    }
+}
+
+body.landing .students-dark .btn i {
+    margin-right: 1em;
+    font-size: 1.25em;
+    position: absolute;
+    top: 50%;
+    left: 14px;
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    transform: translate(0, -50%)
+}
+
+body.landing .students-dark p {
+    color: #fff;
+    margin-bottom: 34px
+}
+
+body.landing .students-dark .intro-section {
+    display: none
+}
+
+body.landing .students-dark .intro-section.is-active-intro {
+    display: block
+}
+
+body.landing .debug {
+    position: absolute;
+    top: -30px;
+    right: 0px;
+    font-size: 10px
+}
+
+body.landing .select2-container .select2-choice {
+    display: inline-block;
+    font-size: 18px;
+    color: #6bbe98;
+    border: 2px solid #6bbe98;
+    border-radius: 4px;
+    padding: 17px 16px;
+    width: 100%
+}
+
+body.landing .select2-container.select2-allowclear .select2-choice .select2-chosen {
+    margin-right: 42px
+}
+
+body.landing .select2-container .select2-choice > .select2-chosen {
+    margin-right: 26px;
+    display: block;
+    color: #ffffff;
+    overflow: hidden;
+    min-height: 18px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    float: none;
+    width: auto
+}
+
+body.landing .select2-container.select2-allowclear .select2-choice abbr {
+    display: inline-block
+}
+
+body.landing .select2-container .select2-choice abbr:hover {
+    background-position: right -11px;
+    cursor: pointer
+}
+
+body.landing .select2-drop-mask {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    min-height: 100%;
+    min-width: 100%;
+    height: auto;
+    width: auto;
+    opacity: 0;
+    z-index: 9998
+}
+
+body.landing .select2-drop {
+    width: 100%;
+    margin-top: -1px;
+    position: absolute;
+    z-index: 9999
+}
+
+body.landing .select2-drop-auto-width {
+    border-top: 1px solid #aaa;
+    width: auto
+}
+
+body.landing .select2-drop-auto-width .select2-search {
+    padding-top: 4px
+}
+
+body.landing .select2-container .select2-choice .select2-arrow:before {
+    content: "\f10c";
+    display: inline-block;
+    font-family: "barrel";
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    line-height: 1;
+    text-decoration: inherit;
+    text-rendering: optimizeLegibility;
+    text-transform: none;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    position: absolute;
+    bottom: 16px;
+    right: 20px;
+    font-size: 14px
+}
+
+body.landing .select2-container .select2-choice .select2-arrow b {
+    display: block;
+    width: 100%;
+    height: 100%
+}
+
+body.landing .select2-container-active .select2-choice, body.landing .select2-container-active .select2-choices {
+    border: 2px solid #6bbe98;
+    color: #6bbe98;
+    outline: none
+}
+
+body.landing .select2-dropdown-open .select2-choice .select2-arrow {
+    background: transparent;
+    border-left: none;
+    filter: none
+}
+
+body.landing .select2-dropdown-open .select2-choice .select2-arrow b {
+    background-position: -18px 1px
+}
+
+body.landing .select2-hidden-accessible {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px
+}
+
+body.landing .select2-results {
+    margin: 1em 0 0 0;
+    position: relative;
+    -webkit-tap-highlight-color: transparent;
+    color: #fff;
+    width: 100%;
+    text-align: left;
+    border: 2px solid #6bbe98;
+    border-radius: 4px;
+    margin-top: 1em;
+    position: relative;
+    background: #2a2c2e
+}
+
+body.landing .select2-results:before {
+    content: "";
+    display: block;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAICAIAAAB/FOjAAAAABnRSTlMAAAAAAABupgeRAAAAdklEQVR4AWNAA8aOtqG9JelbJgIRkAHkMuAB5l4uQHXZ+2bAEZALFMSteuskoKLwCeVGdtZABGSA9GzFpscCpjqsr1Rb30BLRw+ItPUMgFyIHgtvJD1ADkK1HlQ1Tj0WIHejq8apB+g2IAtNNR49QMSAppqgHgA+7WXWnVF4dgAAAABJRU5ErkJggg==);
+    width: 16px;
+    height: 8px;
+    position: absolute;
+    top: -8px;
+    right: 16px
+}
+
+body.landing .select2-results li {
+    -webkit-transition: all 250ms ease;
+    -moz-transition: all 250ms ease;
+    transition: all 250ms ease
+}
+
+body.landing .select2-results li:hover {
+    background: rgba(0, 0, 0, 0.2);
+    cursor: pointer
+}
+
+body.landing .select2-results li + li {
+    border-top: 2px solid #434a4d
+}
+
+body.landing .select2-results ul.select2-result-sub {
+    margin: 0;
+    padding-left: 0
+}
+
+body.landing .select2-results ul.select2-result-sub > li .select2-result-label {
+    padding-left: 20px
+}
+
+body.landing .select2-results ul.select2-result-sub ul.select2-result-sub > li .select2-result-label {
+    padding-left: 40px
+}
+
+body.landing .select2-results ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub > li .select2-result-label {
+    padding-left: 60px
+}
+
+body.landing .select2-results ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub > li .select2-result-label {
+    padding-left: 80px
+}
+
+body.landing .select2-results ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub > li .select2-result-label {
+    padding-left: 100px
+}
+
+body.landing .select2-results ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub > li .select2-result-label {
+    padding-left: 110px
+}
+
+body.landing .select2-results ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub ul.select2-result-sub > li .select2-result-label {
+    padding-left: 120px
+}
+
+body.landing .select2-results li.select2-result-with-children > .select2-result-label {
+    font-weight: bold
+}
+
+body.landing .select2-results .select2-result-label {
+    font-size: 18px;
+    padding: 1em 16px;
+    line-height: 1em
+}
+
+body.landing .select2-results .select2-result-label:hover {
+    background: rgba(0, 0, 0, 0.2)
+}
+
+body.landing .select2-results .select2-highlighted {
+    color: #eee
+}
+
+body.landing .select2-results li em {
+    font-style: normal
+}
+
+body.landing .select2-results .select2-highlighted em {
+    background: rgba(0, 0, 0, 0.2)
+}
+
+body.landing .select2-results .select2-no-results, body.landing .select2-results .select2-searching, body.landing .select2-results .select2-selection-limit {
+    display: list-item;
+    padding-left: 5px
+}
+
+body.landing .select2-results .select2-disabled.select2-highlighted {
+    color: #666;
+    display: list-item;
+    cursor: default
+}
+
+body.landing .select2-results .select2-disabled {
+    display: list-item;
+    cursor: default
+}
+
+body.landing .select2-results .select2-selected {
+    display: none
+}
+
+body.landing .select2-more-results {
+    display: list-item
+}
+
+body.landing .select2-container.select2-container-disabled .select2-choice {
+    background-image: none;
+    border: 1px solid #ddd;
+    cursor: default
+}
+
+body.landing .select2-container.select2-container-disabled .select2-choice .select2-arrow {
+    background-image: none;
+    border-left: 0
+}
+
+body.landing .select2-container.select2-container-disabled .select2-choice abbr {
+    display: none
+}
+
+body.landing .select2-result-selectable .select2-match, body.landing .select2-result-unselectable .select2-match {
+    text-decoration: underline
+}
+
+body.landing .select2-offscreen, body.landing .select2-offscreen:focus {
+    clip: rect(0 0 0 0) !important;
+    width: 1px !important;
+    height: 1px !important;
+    border: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    position: absolute !important;
+    outline: 0 !important;
+    left: 0px !important;
+    top: 0px !important
+}
+
+body.landing .select2-display-none {
+    display: none
+}
+
+body.landing .select2-measure-scrollbar {
+    position: absolute;
+    top: -10000px;
+    left: -10000px;
+    width: 100px;
+    height: 100px;
+    overflow: scroll
+}
+
+body.landing .tip {
+    position: relative
+}
+
+body.landing .tip.inline {
+    display: inline-block;
+    background: #bec4c9;
+    font-size: 13px;
+    width: 1.3em;
+    height: 1.3em;
+    line-height: 1.6em;
+    font-weight: 600;
+    color: #fff;
+    border-radius: 100%
+}
+
+body.landing .tip.inline .tipr_content {
+    text-align: left;
+    width: 250px;
+    margin-top: -15px;
+    font-size: 14px;
+    line-height: 22px
+}
+
+body.landing .tipr_content {
+    color: #6bbe98;
+    font-weight: 400;
+    background-color: #fff;
+    padding: 16px;
+    min-width: 200px;
+    max-width: 300px;
+    border: 2px solid #6bbe98;
+    border-radius: 4px
+}
+
+body.landing .tipr_content:before {
+    content: "";
+    width: 100%;
+    height: 10px;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAICAYAAADwdn+XAAAAdklEQVQoz2NgwALyD8xWyd43YyUQv4PilSAxBmIAULEJVNN/NPwub/8sE4Kac/bN+ADSMPPSjv9vv38CYxAbash7nIYga55zedf/P//+/oeBv0A2SAynIeia/yJpJmgIMZpxGQLSywALJEKacRjyn4EUzdgMAQCb1zrZ4qWhlQAAAABJRU5ErkJggg==) no-repeat center top;
+    position: absolute;
+    top: -6px;
+    left: 0
+}
+
+body.landing .tipr_container_bottom {
+    display: none;
+    position: absolute;
+    margin-top: 30px;
+    z-index: 1000
+}
+
+body.landing .tipr_container_top {
+    display: none;
+    position: absolute;
+    margin-top: -75px;
+    z-index: 1000
+}
+
+body.landing .tipr_point_top, body.landing .tipr_point_bottom {
+    position: relative
+}
+
+body.landing .error-page {
+    padding-bottom: 0;
+    text-align: center;
+    color: #fff;
+    background: #6bbe98;
+    padding-top: 160px
+}
+
+@media screen and (min-width: 48em) {
+    body.landing .error-page {
+        padding-top: 260px
+    }
+}
+
+body.landing .error-page .container, body.landing .error-page .plain-text, body.landing .error-page .resources, body.landing .error-page .modal, body.landing .error-page .owl-carousel {
+    max-width: 500px
+}
+
+body.landing .error-page h1 {
+    line-height: 1em;
+    margin-bottom: 40px;
+    font-weight: 600
+}
+
+body.landing .error-page p {
+    color: #fff
+}
+
+body.landing .error-page .btn {
+    margin-top: 40px;
+    width: 200px
+}
+
+#habla_beta_container_do_not_rely_on_div_classes_or_names::-webkit-input-placeholder {
+    font-size: 1em !important;
+    text-align: left
+}
+
+#habla_beta_container_do_not_rely_on_div_classes_or_names:-moz-placeholder {
+    font-size: 1em !important;
+    text-align: left
+}
+
+#habla_beta_container_do_not_rely_on_div_classes_or_names::-moz-placeholder {
+    font-size: 1em !important;
+    text-align: left
+}
+
+#habla_beta_container_do_not_rely_on_div_classes_or_names:-ms-input-placeholder {
+    font-size: 1em !important;
+    text-align: left
+}
+
+.wufoo-idstamp {
+    display: none
+}
+
+#public-event .event .container {
+    padding-top: 40px
+}
+
+#public-event .icon-menu:before {
+    background-image: none
+}
+
+#public-event .intro {
+    margin-top: 75px;
+    padding: 0 inherit
+}
+
+#public-event .intro .event-image {
+    max-height: 340px;
+    overflow: hidden
+}
+
+#public-event .intro .event-image img {
+    width: 100%;
+    display: block;
+    height: auto
+}
+
+#public-event .intro .info {
+    padding: 30px
+}
+
+#public-event .intro .info .event-name {
+    color: #565A5F;
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 0
+}
+
+#public-event .intro .info .event-location {
+    color: #7E8A94;
+    font-weight: 400
+}
+
+#public-event .content {
+    margin-bottom: 50px;
+    padding: 25px 30px;
+    border: 2px solid #F1F3F3;
+    border-top: 0
+}
+
+#public-event .content .event-meta p {
+    color: #7E8A94;
+    font-size: 16px;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 0;
+    text-align: center
+}
+
+#public-event .content .event-meta i.calendar {
+    width: 21px;
+    height: 21px;
+    background-size: 21px 21px;
+    background: url(https://cdn.involvio.com/assets/marketing/calendar-e5a05fb8d60bd11d33419093f53167c2.svg) no-repeat center center
+}
+
+#public-event .content .event-meta i.pin {
+    width: 18px;
+    height: 23px;
+    background-size: 18px 23px;
+    background: url(https://cdn.involvio.com/assets/marketing/pin-d3e0c237b19f96babc695d8355c393d9.svg) no-repeat center center
+}
+
+#public-event .content .event-meta p.event-venue {
+    margin-top: 20px
+}
+
+#public-event .content .event-meta span {
+    display: block;
+    color: #99A2AA;
+    font-size: 12px;
+    padding-left: 0;
+    text-align: center
+}
+
+#public-event .content .event-meta ul.rsvp-list {
+    text-align: center;
+    margin-top: 30px
+}
+
+#public-event .content .event-meta ul.rsvp-list li {
+    box-shadow: 0 0 0 3px #fff;
+    width: 38px;
+    height: 38px;
+    display: inline-block;
+    border-radius: 38px;
+    vertical-align: top;
+    margin-right: -10px;
+    overflow: hidden
+}
+
+#public-event .content .event-meta ul.rsvp-list li.others {
+    box-shadow: none
+}
+
+#public-event .content .event-meta ul.rsvp-list li a {
+    font-size: 12px;
+    display: block;
+    background: #6bbe98;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 14px;
+    width: 100%;
+    height: 100%;
+    line-height: 38px;
+    position: relative
+}
+
+#public-event .content .event-meta ul.rsvp-list li a img {
+    display: block;
+    width: 100%
+}
+
+#public-event .content ul.event-actions {
+    text-align: left;
+    margin-top: 34px
+}
+
+#public-event .content ul.event-actions li {
+    margin-right: 0;
+    margin-bottom: 10px;
+    float: none;
+    width: 100%;
+    text-align: center
+}
+
+#public-event .content ul.event-actions li a {
+    cursor: pointer;
+    padding-left: 0;
+    position: relative;
+    font-weight: 400;
+    line-height: 25px;
+    font-size: 16px;
+    display: block;
+    color: #7E8A94;
+    padding: 14px 14px;
+    border-radius: 4px;
+    border: 2px solid #6bbe98;
+    color: #6bbe98;
+    -webkit-transition: all 250ms ease;
+    -moz-transition: all 250ms ease;
+    transition: all 250ms ease
+}
+
+#public-event .content ul.event-actions li a:hover {
+    background: #6bbe98;
+    color: #ffffff
+}
+
+#public-event .content ul.event-actions i.plus {
+    width: 20px;
+    height: 20px;
+    background-size: 20px 20px;
+    background: url(https://cdn.involvio.com/assets/marketing/plus-43bd7f6f6125943d34e92ef38afaa83b.svg) no-repeat center center
+}
+
+#public-event .content ul.event-actions i.comments {
+    width: 25px;
+    height: 21px;
+    background-size: 25px 21px;
+    background: url(https://cdn.involvio.com/assets/marketing/comments-0317a132679c243bef4b2631b56e029b.svg) no-repeat center center
+}
+
+#public-event .content ul.event-actions i.share {
+    width: 18px;
+    height: 22px;
+    background-size: 18px 22px;
+    background: url(https://cdn.involvio.com/assets/marketing/share-cf5ca122bba835b172668cf6bfaf8110.svg) no-repeat center center
+}
+
+#public-event .content .event-text {
+    font-size: 16px;
+    line-height: 28px;
+    border-top: 2px solid #F1F3F3;
+    margin: 40px 0 0 0;
+    padding: 40px 0 0 0;
+    color: #7E8A94;
+    font-weight: 400
+}
+
+#sharePublicEvent li a {
+    color: #fff;
+    width: 250px;
+    display: block;
+    margin: 20px auto
+}
+
+@media screen and (min-width: 37.5em) {
+    #public-event .event .container {
+        padding-top: 80px
+    }
+
+    #public-event .content .event-meta p {
+        padding-left: 30px;
+        text-align: left
+    }
+
+    #public-event .content .event-meta span {
+        padding-left: 30px;
+        text-align: left
+    }
+
+    #public-event .content .event-meta ul.rsvp-list {
+        text-align: center
+    }
+
+    #public-event .content .event-meta i {
+        position: absolute;
+        left: 0
+    }
+
+    #public-event .content ul.event-actions {
+        border-top: 2px solid #F1F3F3;
+        margin-top: 40px;
+        padding-top: 40px
+    }
+
+    #public-event .content ul.event-actions li {
+        margin-bottom: 15px
+    }
+
+    #public-event .content ul.event-actions li a {
+        font-size: 16px;
+        padding: 0;
+        border-radius: 0;
+        border: 0;
+        color: #7E8A94
+    }
+
+    #public-event .content ul.event-actions i {
+        position: relative;
+        display: inline-block;
+        top: 4px;
+        margin-right: 10px
+    }
+}
+
+@media screen and (min-width: 48em) {
+    #public-event .intro .info {
+        padding: 60px
+    }
+
+    #public-event .intro .info .event-name {
+        font-size: 27px;
+        line-height: 34px
+    }
+
+    #public-event .intro .info .event-location {
+        font-size: 18px
+    }
+
+    #public-event .content {
+        margin-bottom: 100px;
+        padding: 100px 60px
+    }
+
+    #public-event .content .event-meta p {
+        font-size: 21px;
+        padding-left: 30px;
+        text-align: left
+    }
+
+    #public-event .content .event-meta p.event-venue {
+        margin-top: 40px
+    }
+
+    #public-event .content .event-meta i {
+        position: absolute;
+        left: 0;
+        display: block
+    }
+
+    #public-event .content .event-meta span {
+        font-size: 14px;
+        padding-left: 30px;
+        text-align: left
+    }
+
+    #public-event .content .event-meta ul.rsvp-list {
+        text-align: left
+    }
+
+    #public-event .content .event-meta ul.rsvp-list li {
+        width: 60px;
+        height: 60px
+    }
+
+    #public-event .content .event-meta ul.rsvp-list li a {
+        line-height: 60px;
+        font-size: 18px
+    }
+
+    #public-event .content ul.event-actions {
+        border-top: 2px solid #F1F3F3;
+        margin-top: 60px;
+        padding-top: 60px
+    }
+
+    #public-event .content ul.event-actions li {
+        padding: 0 0.5em;
+        float: left;
+        width: 33.33%;
+        text-align: center
+    }
+
+    #public-event .content ul.event-actions li a {
+        text-align: center;
+        font-size: 21px;
+        padding: 0;
+        border-radius: 0;
+        border: 0;
+        color: #7E8A94
+    }
+
+    #public-event .content .event-text {
+        font-size: 18px;
+        line-height: 32px;
+        margin: 50px 0 0 0;
+        padding: 100px 20px 0 20px
+    }
+}
+
+#sk-holder #sk-container #sk-header {
+    color: #6bbe98 !important;
+    font-weight: 500 !important;
+    line-height: 32px !important;
+    font-family: "Avenir Next W01", "Avenir Next", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif !important
+}
+
+#sk-holder #sk-conversation *, #sk-holder #sk-container .input, #sk-holder .send, #sk-holder p {
+    font-family: "Avenir Next W01", "Avenir Next", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif !important
+}
+
+#sk-holder #sk-container #sk-conversation .sk-logo {
+    display: none !important
+}
+
+#sk-holder #sk-container #sk-conversation .sk-intro-section .app-name {
+    font-weight: 600 !important
+}
+
+#sk-holder #sk-container .sk-settings .settings-wrapper .input-group .email-input {
+    border: 2px solid #f4f4f4 !important;
+    height: auto !important;
+    padding: 10px 10px 10px 50px !important
+}
+
+#sk-holder #sk-container .sk-settings .settings-wrapper .input-group i.before-icon {
+    top: 25px !important;
+    left: 22px !important;
+    z-index: 10
+}
+
+#sk-holder #sk-container .input-group {
+    padding: 10px 0 5px !important
+}

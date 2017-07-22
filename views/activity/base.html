@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/css/style.css"/>
+    <link rel="stylesheet" href="/static/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="/static/css/activity.css"/>
+    <link href="/static/css/emPlayer.css" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <title>Music Therapy - Activity</title>
+</head>
+
+<body class="landing is-editor">
+<div class="wrapper">
+    <div class="sticky-wrapper">
+        <header class="header" role="banner">
+
+            <div class="container">
+                <p class="logo">
+                    <a href="{{ url_for('index') }}">
+                        <img alt="Music Therapy Logo here" src="/static/images/logo.png">
+                    </a>
+                </p>
+            </div>
+        </header>
+        <section class="landing-question bg-grey">
+            <!--<section class="landing-question bg-grey">-->
+
+            <div class="container">
+                {% block header %}
+                {% endblock header %}
+                <div id="content">
+                </div>
+
+            </div>
+
+            <!--</section>-->
+        </section>
+    </div>
+ </div>
+    {% block adminMode %}
+    <script>
+        admin_mode = false;
+    </script>
+    {% endblock adminMode %}
+
+    <script type="text/javascript" src="/static/js/core.js"></script>
+
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
+    <script src="/static/js/activity/page_handler.js"></script>
+    <script src="/static/js/question/viewer.js"></script>
+    <script src="/static/js/activity/widgets.js"></script>
+    <script src="/static/js/activity/viewer.js"></script>
+
+
+</body>
+</html>

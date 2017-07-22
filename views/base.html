@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]> ><! <![endif]-->
+<html class="no-js"><!-- <![endif] -->
+
+{% block head %}
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="{{ gauth_key }}">
+    <link href="/static/css/style.css" rel="stylesheet">
+    <!--<link href="/static/css/newModel.css" rel="stylesheet">-->
+
+
+    <script>
+        function onSignIn(googleUser) {
+            // The ID token you need to pass to your backend:
+            var id_token = googleUser.getAuthResponse().id_token;
+            App.login_guath(id_token);
+        }
+    </script>
+    {% block additionalCss %}{% endblock additionalCss %}
+
+
+    <title>{% block title %}Music Therapy{% endblock title %}</title>
+
+</head>
+{% endblock head %}
+
+{% block body %}
+<body id="landing" class="landing is-user">
+{% endblock body %}
+
+{% block header %}
+
+<div class="wrapper">
+
+    <div class="sticky-wrapper">
+
+        <header class="header" role="banner">
+
+            <div class="container">
+                <p class="logo">
+                    <a href="{{ url_for('index') }}">
+                        <img alt="Music Therapy Logo here" src="/static/images/logo.png">
+                    </a>
+                </p>
+
+                <nav>
+                    <ul>
+
+                        <li class="has-submenu" id="expandAct">
+                            <a id="actBefore">Activities</a>
+                            {% if is_logged_in %}
+                            <ul>
+                                <li><a style='color:grey;'>Exercise</a></li>
+                                <li><a style='color:grey;'>Create Playlist</a></li>
+                            </ul>
+                        </li>
+                        <li><a data-modal="contactUs" href="#"> Contact Us</a></li>
+
+                        <li><a href="{{ url_for('user') }}">{{ user_email }}</a></li>
+                        <li class="last"><a class="btn" href="{{ url_for('logout') }}">Log out</a></li>
+                        {% else %}
+                        <ul>
+                            <li><a style='color:grey;' href="{{ url_for('activity_exercise') }}">Exercise</a></li>
+                        </ul>
+                        </li>
+                        <li><a data-modal="contactUs" href="#"> Contact Us</a></li>
+                        <li><a data-modal="signUp" href="#" id ="signup_alert"> Sign Up <i class="login-user-icon"></i></a></a></li>
+                        <li><a data-modal="loginpage" href="#" class="user-login"> Login <i class="login-user-icon"></i></a>
+                        </li>
+
+                        {% endif %}
+                    </ul>
+                </nav>
+
+
+            </div>
+        </header>
+        {% endblock header %}
+        {% block content %}
+
+        {% endblock content %}
+    </div>
+    {% block footer %}
+    <!-- footer -->
+    <footer class="footer">
+        <div class="bottom">
+            <div class="container">
+                <nav>
+                    <div class="clear">
+
+                    </div>
+                    <ul>
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                        <li>
+                            <a data-modal="contactUs" href="#"> Contact Us</a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+    </footer>
+    {% endblock footer %}
+
+    <!--model-->
+    {% block modal %}
+    <div class="modal-container">
+
+        <div class="container">
+
+            <section class="modal contact-us" id="contactUs">
+                <h1>Contact us</h1>
+                <ul>
+                    <li>
+                        <i class="icon-email"></i>
+                        <p>
+                            <a href="mailto:hello@musictherapy.com">k.mcferran@unimelb.edu.au</a>
+                        </p>
+                    </li>
+                    <li>
+                        <i class="icon-facebook"></i>
+                        <p>
+                            Online Music Therapy Training
+                        </p>
+                        <p>
+                            <a href="#" target="_blank">Follow us on Facebook</a>
+                        </p>
+                    </li>
+
+                </ul>
+            </section>
+
+            <section class="modal header-ctas lg" id="loginpage">
+                <h1>Choose Your Login</h1>
+
+
+                <div class="row">
+
+                    <a class="cta" href="#">
+                        <h1>Facebook</h1>
+                        <div class="fb-login-button" data-max-rows="1" data-size="xlarge"
+                             data-scope="public_profile,email"
+                             data-show-faces="false" data-auto-logout-link="false" onlogin="onFbLogin"></div>
+                    </a>
+
+                    <a class="cta" href="#">
+                        <h1>Google</h1>
+                        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+                    </a>
+
+
+                </div>
+                <div class="center"><h1>OR</h1></div>
+                <div class="cta row">
+                    <h1>E-mail</h1>
+                    <div class="login-container">
+                        <form accept-charset="UTF-8" action="/loginnormal" class="simple_form user"
+                              enctype="multipart/form-data" method="post" novalidate="novalidate" name="login_form"
+                              onsubmit="return validateForm()">
+
+                            <div class="input">
+                                <label>Email:</label>
+                                <br>
+                                <input class="string email required" id="user_email" name="user[email]"
+                                       required="required" size="50" type="text">
+                            </div>
+
+                            <div class="input">
+                                <label>Password:</label>
+                                <br>
+                                <input class="string email required" id="password" name="user[pwd]"
+                                       required="required" size="50" type="password">
+                            </div>
+
+                            <div class="row btn-half">
+                                <button class="btn lg solid-green" type="submit">Sign In</button>
+                                <a class="btn lg dull" type="button" href="#"
+                                   data-modal="loginpage">Cancel</a>
+                            </div>
+
+
+                            <div class="rule"></div>
+                            <p>
+                                Forgot your password?
+                                <a href="#" data-modal="forgotpassword">Reset password</a>
+                            </p>
+
+                            <p style="margin-top:19px;">
+                                Don't have an account?
+                                <a href="#" data-modal="signUp">Sign up</a>
+                            </p>
+                        </form>
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+            <section class="modal header-ctas lg" id="signUp">
+                <h1>Sign Up</h1>
+                <div class="login-container">
+
+                    <form action="/signup" class="simple_form user" enctype="multipart/form-data" method="post"
+                          novalidate="novalidate" name="formname_signup" onsubmit="return validateForm_signup()">
+                        <div style="margin:0;padding:0;display:inline">
+                            <input name="utf8" value="✓" type="hidden"><input name="authenticity_token" type="hidden">
+                        </div>
+                        <div class="row">
+                            <div class="input half">
+                                <label for="u_firstname">First Name:</label>
+                                <br>
+                                <input id="u_firstname" name="u_firstname" required="required" type="text">
+                            </div>
+                            <div class="input half">
+                                <label for="u_lastname">Last Name:</label>
+                                <br>
+                                <input id="u_lastname" name="u_lastname" required="required" type="text">
+                            </div>
+                        </div>
+
+                        <div class="input">
+                            <label for="user_email">E-mail Address:</label>
+                            <br>
+                            <input class="string email required" id="u_email" name="u_email" required="required"
+                                   size="50" type="text" onchange="isValidEmail()" onkeydown="cleanSpace()">
+                            <h5 id="spaceUser" style="color:red;"></h5>
+                        </div>
+
+                        <div class="input">
+                            <label>Password:</label>
+                            <br>
+                            <input class="password required" id="u_password" name="u_password" required="required"
+                                   size="50" type="password" onchange="isValidPassword()"
+                                   onkeydown="cleanSpacepwdfirst()">
+                            <h5 id="spacePwd-first" style="color:red;"></h5>
+                        </div>
+
+                        <div class="input">
+                            <label>Confirm Password:</label>
+                            <br>
+                            <input class="password required" id="user_password_confirmation"
+                                   name="user[password_confirmation]" required="required" size="50" type="password"
+                                   onchange="reCheckpassword()" onkeydown="cleanSpacepwdscond()">
+                            <h5 id="spacePwd-second" style="color:red;"></h5>
+                        </div>
+                        <div class="row">
+                            <div class="input half">
+                                <div class="field-wrap date">
+                                    <div class="pickdate-container">
+                                        <label>Age:</label>
+                                        <br>
+                                        <input name="u_age" id="u_age" onchange="isValidage()"
+                                               onkeydown="cleanspace_age()" required="required">
+                                        <h5 id="birthday-age" style="color:red;"></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input half gender">
+                                <label for="user_gender">Gender: </label>
+                                <br>
+                                <select class="required" name="user[gender]" id="user_gender" required="required">
+                                    <option value="Blank"></option>
+                                    <option value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                    <option value="Other">Other</option>
+                                    <option value="Secret">Prefer not to say</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input">
+
+
+                                <label for="u_genre">Preferred music genres (if any):</label>
+                                <br>
+                                <input class="string email required" id="u_genre" name="u_genre" size="50"
+                                       onkeydown="cleanSpace()" type="text">
+                            </div>
+
+                        </div>
+
+                        <div class="row btn-half">
+                            <button class="btn lg solid-green" type="submit">Sign Up</button>
+                            <a class="btn lg dull" type="button" href="#" data-modal="loginpage">Cancel</a>
+                        </div>
+                        <p>
+                            Already have an account?
+                            <a href="#" data-modal="loginpage">Sign in</a>
+                        </p>
+                    </form>
+                </div>
+            </section>
+
+            <section class="modal header-ctas lg" id="changePassword">
+                <!--<div class="row" width="50%">-->
+                <h1>Change Password</h1>
+
+                <div class="login-container">
+                    <form accept-charset="UTF-8" action="/changpassword" class="simple_form user"
+                          enctype="multipart/form-data" method="post" novalidate="novalidate">
+
+                        <div class="input">
+                            <label for="user_email">E-mail Address:</label>
+                            <br>
+                            <input class="string email required" id="change_email" name="change[email]"
+                                   required="required" size="50" type="text">
+                        </div>
+
+                        <div class="input">
+                            <label for="user_email">Old Password:</label>
+                            <br>
+                            <input class="string email required" id="change_oldpwd" name="change[oldpassword]"
+                                   required="required" size="50" type="text">
+                        </div>
+
+                        <div class="input">
+                            <label for="user_email">New Password:</label>
+                            <br>
+                            <input class="string email required" id="change_new" name="change[newpassword]"
+                                   required="required" size="50" type="text">
+                        </div>
+
+                        <div class="input">
+                            <label for="user_email">Re-enter New Password:</label>
+                            <br>
+                            <input class="string email required" id="change_renew" name="change[renewpassword]"
+                                   required="required" size="50" type="text">
+                        </div>
+
+
+                        <div class="row btn-half">
+                            <button class="btn lg solid-green" type="submit">Confirm</button>
+                            <a class="btn lg dull" type="button" href="#" data-modal="loginpage">Cancel</a>
+                        </div>
+
+                        <h5 id="{{message}}"></h5>
+
+                        <div class="rule"></div>
+                        <p>
+                            Forgot your password?
+                            <a href="#" data-modal="forgotpassword">Reset password</a>
+                        </p>
+                    </form>
+                </div>
+            </section>
+
+            <section class="modal header-ctas lg" id="forgotpassword">
+                <h1>Reset Password</h1>
+
+                <div class="login-container">
+                    <form accept-charset="UTF-8" action="/sendemailforgotpassword" class="simple_form user"
+                          enctype="multipart/form-data" method="post" novalidate="novalidate">
+                        <p>Your reset password information will be sent to your e-mail address</p>
+                        <div class="input">
+                            <label for="user_email">Email Address:</label>
+                            <br>
+                            <input class="string email required" id="user_email_forgot" name="user[email_forgot]"
+                                   required="required" size="50" type="text">
+                            <div class="row btn-half">
+                                <button class="btn lg solid-green" type="submit">Confirm</button>
+                                <a class="btn lg dull" type="button" data-modal="loginpage">Cancel</a>
+                            </div>
+                            <p id="message"></p>
+                        </div>
+
+                    </form>
+                </div>
+            </section>
+
+            <button class="closeModal close-btn">
+                <i class="icon-x"></i>
+            </button>
+        </div>
+    </div>
+
+    {% endblock modal %}
+</div>
+
+{% block handlerscripts %}
+<script type="text/javascript" src="/static/js/core.js"></script>
+
+<script type="text/javascript" src="/static/js/jquery.js"></script>
+<!--<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>-->
+<script type="text/javascript" src="/static/js/home.js"></script>
+<script type="text/javascript" src="/static/js/header.js"></script>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="/static/js/app.js"></script>
+<script>
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: '{{ fb_key }}',
+            xfbml: true,
+            version: 'v2.7'
+        });
+        FB.getLoginStatus(onFbLogin);
+    };
+
+
+    function onFbLogin(result) {
+        if (result.status == 'connected') {
+            App.login_fb(result.authResponse.accessToken, result.authResponse.userID);
+        }
+    }
+
+    (function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement(s);
+        js.id = id;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+</script>
+
+{% endblock handlerscripts %}
+{% block additionalScripts %}
+{% endblock additionalScripts %}
+</body>
+</html>

@@ -1,0 +1,553 @@
+.login-user-icon:after {
+    margin-left: 5px;
+    vertical-align: bottom;
+    font-size: 16px
+}
+
+.picker__day--highlighted, .picker__list-item--highlighted {
+    border-color: #4AA0C2
+}
+
+.picker__nav--prev:hover, .picker__nav--next:hover, .picker__day--infocus:hover, .picker__day--outfocus:hover, .picker__day--highlighted:hover, .picker--focused .picker__day--highlighted, .picker__button--today:hover, .picker__button--clear:hover, .picker__button--close:hover, .picker__list-item:hover, .picker__list-item--highlighted:hover, .picker--focused .picker__list-item--highlighted, .picker--time .picker__button--clear:hover, .picker--time .picker__button--clear:focus {
+    cursor: pointer;
+    color: #565A5F;
+    background: #f1f3f3;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background-clip: padding-box
+}
+
+.picker__day--selected, .picker__day--selected:hover, .picker--focused .picker__day--selected, .picker__list-item--selected, .picker__list-item--selected:hover, .picker--focused .picker__list-item--selected {
+    background: #4AA0C2;
+    color: #fff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    background-clip: padding-box
+}
+
+.picker__day--disabled, .picker__day--disabled:hover, .picker--focused .picker__day--disabled, .picker__button--today[disabled], .picker__button--today[disabled]:hover, .picker__list-item--disabled, .picker__list-item--disabled:hover, .picker--focused .picker__list-item--disabled {
+    background: #fafafb;
+    border-color: #fafafb;
+    color: #cacdce;
+    cursor: default
+}
+
+.picker {
+    font-size: 16px;
+    text-align: left;
+    line-height: 32px;
+    color: #6bbe98;
+    position: absolute;
+    z-index: 10000;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.picker__input {
+    cursor: default
+}
+
+.picker__input.picker__input--active {
+    border-color: #6bbe98
+}
+
+.picker__holder {
+    width: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch
+}
+
+/*!
+* Classic picker styling for pickadate.js
+* Demo: http://amsul.github.io/pickadate.js
+*/
+.picker__day--highlighted, .picker__list-item--highlighted {
+    border-color: #4AA0C2
+}
+
+.picker__nav--prev:hover, .picker__nav--next:hover, .picker__day--infocus:hover, .picker__day--outfocus:hover, .picker__day--highlighted:hover, .picker--focused .picker__day--highlighted, .picker__button--today:hover, .picker__button--clear:hover, .picker__button--close:hover, .picker__list-item:hover, .picker__list-item--highlighted:hover, .picker--focused .picker__list-item--highlighted, .picker--time .picker__button--clear:hover, .picker--time .picker__button--clear:focus {
+    cursor: pointer;
+    color: #565A5F;
+    background: #f1f3f3;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px
+}
+
+.picker__day--selected, .picker__day--selected:hover, .picker--focused .picker__day--selected, .picker__list-item--selected, .picker__list-item--selected:hover, .picker--focused .picker__list-item--selected {
+    background: #4AA0C2;
+    color: #fff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px
+}
+
+.picker__day--disabled, .picker__day--disabled:hover, .picker--focused .picker__day--disabled, .picker__button--today[disabled], .picker__button--today[disabled]:hover, .picker__list-item--disabled, .picker__list-item--disabled:hover, .picker--focused .picker__list-item--disabled {
+    background: #fafafb;
+    border-color: #fafafb;
+    color: #cacdce;
+    cursor: default
+}
+
+.picker {
+    width: 100%
+}
+
+.picker__holder {
+    position: absolute;
+    background: #fff;
+    border: 1px solid #fff;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    -webkit-border-radius: 0 0 4px 4px;
+    -moz-border-radius: 0 0 4px 4px;
+    border-radius: 0 0 4px 4px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    min-width: 176px;
+    max-width: 100%;
+    max-height: 0;
+    -moz-opacity: 0;
+    opacity: 0;
+    -webkit-transform: translateY(-1em) perspective(600px) rotateX(10deg);
+    -moz-transform: translateY(-1em) perspective(600px) rotateX(10deg);
+    transform: translateY(-1em) perspective(600px) rotateX(10deg);
+    -webkit-transition: -webkit-transform 0.15s ease-out, opacity 0.15s ease-out, max-height 0s 0.15s, border-width 0s 0.15s;
+    -moz-transition: -moz-transform 0.15s ease-out, opacity 0.15s ease-out, max-height 0s 0.15s, border-width 0s 0.15s;
+    transition: transform 0.15s ease-out, opacity 0.15s ease-out, max-height 0s 0.15s, border-width 0s 0.15s
+}
+
+.picker__frame {
+    padding: 1px
+}
+
+.picker__wrap {
+    margin: -1px
+}
+
+.picker--opened .picker__holder {
+    max-height: 30em;
+    -moz-opacity: 1;
+    opacity: 1;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    -webkit-transform: translateY(0) perspective(600px) rotateX(0);
+    -moz-transform: translateY(0) perspective(600px) rotateX(0);
+    transform: translateY(0) perspective(600px) rotateX(0);
+    -webkit-transition: -webkit-transform 0.15s ease-out, opacity 0.15s ease-out, max-height 0s, border-width 0s;
+    -moz-transition: -moz-transform 0.15s ease-out, opacity 0.15s ease-out, max-height 0s, border-width 0s;
+    transition: transform 0.15s ease-out, opacity 0.15s ease-out, max-height 0s, border-width 0s;
+    -webkit-box-shadow: 0 6px 18px 1px rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 6px 18px 1px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 6px 18px 1px rgba(0, 0, 0, 0.12)
+}
+
+.picker__day--highlighted, .picker__list-item--highlighted {
+    border-color: #4AA0C2
+}
+
+.picker__nav--prev:hover, .picker__nav--next:hover, .picker__day--infocus:hover, .picker__day--outfocus:hover, .picker__day--highlighted:hover, .picker--focused .picker__day--highlighted, .picker__button--today:hover, .picker__button--clear:hover, .picker__button--close:hover, .picker__list-item:hover, .picker__list-item--highlighted:hover, .picker--focused .picker__list-item--highlighted, .picker--time .picker__button--clear:hover, .picker--time .picker__button--clear:focus {
+    cursor: pointer;
+    color: #565A5F;
+    background: #f1f3f3;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px
+}
+
+.picker__day--selected, .picker__day--selected:hover, .picker--focused .picker__day--selected, .picker__list-item--selected, .picker__list-item--selected:hover, .picker--focused .picker__list-item--selected {
+    background: #4AA0C2;
+    color: #fff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px
+}
+
+.picker__day--disabled, .picker__day--disabled:hover, .picker--focused .picker__day--disabled, .picker__button--today[disabled], .picker__button--today[disabled]:hover, .picker__list-item--disabled, .picker__list-item--disabled:hover, .picker--focused .picker__list-item--disabled {
+    background: #fafafb;
+    border-color: #fafafb;
+    color: #cacdce;
+    cursor: default
+}
+
+.picker__box {
+    padding: 1em
+}
+
+.picker__header {
+    text-align: center;
+    position: relative;
+    margin-top: .75em
+}
+
+.picker__month, .picker__year {
+    color: #565A5F;
+    font-weight: 600;
+    display: inline-block;
+    margin-left: .25em;
+    margin-right: .25em
+}
+
+.picker__select--month, .picker__select--year {
+    border: 1px solid #d0d0d9;
+    height: 2em;
+    padding: .5em;
+    margin-left: .25em;
+    margin-right: .25em
+}
+
+@media (min-width: 30em) {
+    .picker__select--month, .picker__select--year {
+        margin-top: -.5em
+    }
+}
+
+.picker__select--month {
+    width: 35%
+}
+
+.picker__select--year {
+    width: 22.5%
+}
+
+.picker__select--month:focus, .picker__select--year:focus {
+    border-color: #4AA0C2
+}
+
+.picker__nav--prev, .picker__nav--next {
+    position: absolute;
+    padding: .15em 1.25em;
+    width: 1em;
+    box-sizing: content-box;
+    top: -0.15em
+}
+
+.picker__nav--prev {
+    left: 0;
+    padding-right: 1.25em
+}
+
+.picker__nav--next {
+    right: 0;
+    padding-left: 1.25em
+}
+
+.picker__nav--prev:before, .picker__nav--next:before {
+    content: "c";
+    font-family: "involvio", sans-serif;
+    display: block;
+    margin: 0 auto
+}
+
+.picker__nav--next:before {
+    content: "d"
+}
+
+.picker__nav--disabled, .picker__nav--disabled:hover, .picker__nav--disabled:before, .picker__nav--disabled:before:hover {
+    cursor: default;
+    background: none;
+    border-right-color: #fafafb;
+    border-left-color: #fafafb
+}
+
+.picker__table {
+    text-align: center;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+    font-size: inherit;
+    width: 100%;
+    margin-top: .75em;
+    margin-bottom: .5em
+}
+
+.picker__table td {
+    margin: 0;
+    padding: 0
+}
+
+.picker__weekday {
+    width: 14.285714286%;
+    font-size: .75em;
+    padding-bottom: .25em;
+    color: #7E8A94;
+    font-weight: 500
+}
+
+.picker__day {
+    padding: .3125em 0;
+    border: 1px solid transparent
+}
+
+.picker__day--today {
+    position: relative
+}
+
+.picker__day--today:before {
+    content: " ";
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 0;
+    height: 0;
+    border-top: 0.5em solid #4AA0C2;
+    border-left: .5em solid transparent
+}
+
+.picker__day--disabled:before {
+    border-top-color: #aaa
+}
+
+.picker__day--outfocus {
+    color: #cacdce
+}
+
+.picker__day--highlighted.picker__day--disabled, .picker__day--highlighted.picker__day--disabled:hover {
+    background: #f1f3f3
+}
+
+.picker__footer {
+    text-align: center
+}
+
+.picker__button--today, .picker__button--clear, .picker__button--close {
+    border: 1px solid #fff;
+    background: #fff;
+    font-size: .8em;
+    padding: .66em 0;
+    font-weight: 600;
+    width: 33%;
+    display: inline-block;
+    vertical-align: bottom
+}
+
+.picker__button--today:hover, .picker__button--clear:hover, .picker__button--close:hover {
+    border-bottom-color: #f1f3f3
+}
+
+.picker__button--today:focus, .picker__button--clear:focus, .picker__button--close:focus {
+    background: #f1f3f3;
+    border-color: #4AA0C2;
+    outline: none
+}
+
+.picker__button--today:before, .picker__button--clear:before, .picker__button--close:before {
+    position: relative;
+    display: inline-block;
+    height: 0
+}
+
+.picker__button--today:before, .picker__button--clear:before {
+    content: " ";
+    margin-right: .45em
+}
+
+.picker__button--today:before {
+    top: -.05em;
+    width: 0;
+    border-top: 0.66em solid #4AA0C2;
+    border-left: .66em solid transparent
+}
+
+.picker__button--clear:before {
+    top: -.25em;
+    width: .66em;
+    border-top: 3px solid #DF574E
+}
+
+.picker__button--close:before {
+    content: "\D7";
+    top: -.1em;
+    vertical-align: top;
+    font-size: 1.1em;
+    margin-right: .35em;
+    color: #7E8A94
+}
+
+.picker__button--today[disabled]:before {
+    border-top-color: #aaa
+}
+
+.picker__day--highlighted, .picker__list-item--highlighted {
+    border-color: #4AA0C2
+}
+
+.picker__nav--prev:hover, .picker__nav--next:hover, .picker__day--infocus:hover, .picker__day--outfocus:hover, .picker__day--highlighted:hover, .picker--focused .picker__day--highlighted, .picker__button--today:hover, .picker__button--clear:hover, .picker__button--close:hover, .picker__list-item:hover, .picker__list-item--highlighted:hover, .picker--focused .picker__list-item--highlighted, .picker--time .picker__button--clear:hover, .picker--time .picker__button--clear:focus {
+    cursor: pointer;
+    color: #565A5F;
+    background: #f1f3f3;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px
+}
+
+.picker__day--selected, .picker__day--selected:hover, .picker--focused .picker__day--selected, .picker__list-item--selected, .picker__list-item--selected:hover, .picker--focused .picker__list-item--selected {
+    background: #4AA0C2;
+    color: #fff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px
+}
+
+.picker__day--disabled, .picker__day--disabled:hover, .picker--focused .picker__day--disabled, .picker__button--today[disabled], .picker__button--today[disabled]:hover, .picker__list-item--disabled, .picker__list-item--disabled:hover, .picker--focused .picker__list-item--disabled {
+    background: #fafafb;
+    border-color: #fafafb;
+    color: #cacdce;
+    cursor: default
+}
+
+.picker__day--highlighted, .picker__list-item--highlighted {
+    border-color: #4AA0C2
+}
+
+.picker__nav--prev:hover, .picker__nav--next:hover, .picker__day--infocus:hover, .picker__day--outfocus:hover, .picker__day--highlighted:hover, .picker--focused .picker__day--highlighted, .picker__button--today:hover, .picker__button--clear:hover, .picker__button--close:hover, .picker__list-item:hover, .picker__list-item--highlighted:hover, .picker--focused .picker__list-item--highlighted, .picker--time .picker__button--clear:hover, .picker--time .picker__button--clear:focus {
+    cursor: pointer;
+    color: #565A5F;
+    background: #f1f3f3;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px
+}
+
+.picker__day--selected, .picker__day--selected:hover, .picker--focused .picker__day--selected, .picker__list-item--selected, .picker__list-item--selected:hover, .picker--focused .picker__list-item--selected {
+    background: #4AA0C2;
+    color: #fff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px
+}
+
+.picker__day--disabled, .picker__day--disabled:hover, .picker--focused .picker__day--disabled, .picker__button--today[disabled], .picker__button--today[disabled]:hover, .picker__list-item--disabled, .picker__list-item--disabled:hover, .picker--focused .picker__list-item--disabled {
+    background: #fafafb;
+    border-color: #fafafb;
+    color: #cacdce;
+    cursor: default
+}
+
+.picker__list {
+    list-style: none;
+    padding: 20px;
+    margin: 0
+}
+
+.picker__list-item {
+    border-bottom: 1px solid #fafafb;
+    border-top: 1px solid #fafafb;
+    margin-bottom: -1px;
+    position: relative;
+    background: #fff;
+    padding: .75em 1.25em
+}
+
+@media (min-height: 46.75em) {
+    .picker__list-item {
+        padding: .5em 1em
+    }
+}
+
+.picker__list-item:hover {
+    z-index: 10
+}
+
+.picker__list-item--highlighted {
+    z-index: 10
+}
+
+.picker__list-item--selected, .picker__list-item--selected:hover, .picker--focused .picker__list-item--selected {
+    z-index: 10
+}
+
+.picker__list-item--disabled, .picker__list-item--disabled:hover, .picker--focused .picker__list-item--disabled {
+    border-color: #fafafb;
+    z-index: auto
+}
+
+.picker--time .picker__button--clear {
+    display: block;
+    width: 80%;
+    margin: 1em auto 0;
+    padding: 1em 1.25em;
+    background: none;
+    border: 0;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+    color: #565A5F
+}
+
+.picker--time .picker__button--clear:hover, .picker--time .picker__button--clear:focus {
+    background: #DF574E;
+    border-color: #DF574E;
+    cursor: pointer;
+    color: #fff;
+    outline: none
+}
+
+.picker--time .picker__button--clear:before {
+    top: -.25em;
+    color: #565A5F;
+    font-size: 1.25em;
+    font-weight: bold
+}
+
+.picker--time .picker__button--clear:hover:before, .picker--time .picker__button--clear:focus:before {
+    color: #fff
+}
+
+.picker__day--highlighted, .picker__list-item--highlighted {
+    border-color: #4AA0C2
+}
+
+.picker__nav--prev:hover, .picker__nav--next:hover, .picker__day--infocus:hover, .picker__day--outfocus:hover, .picker__day--highlighted:hover, .picker--focused .picker__day--highlighted, .picker__button--today:hover, .picker__button--clear:hover, .picker__button--close:hover, .picker__list-item:hover, .picker__list-item--highlighted:hover, .picker--focused .picker__list-item--highlighted, .picker--time .picker__button--clear:hover, .picker--time .picker__button--clear:focus {
+    cursor: pointer;
+    color: #565A5F;
+    background: #f1f3f3;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px
+}
+
+.picker__day--selected, .picker__day--selected:hover, .picker--focused .picker__day--selected, .picker__list-item--selected, .picker__list-item--selected:hover, .picker--focused .picker__list-item--selected {
+    background: #4AA0C2;
+    color: #fff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px
+}
+
+.picker__day--disabled, .picker__day--disabled:hover, .picker--focused .picker__day--disabled, .picker__button--today[disabled], .picker__button--today[disabled]:hover, .picker__list-item--disabled, .picker__list-item--disabled:hover, .picker--focused .picker__list-item--disabled {
+    background: #fafafb;
+    border-color: #fafafb;
+    color: #cacdce;
+    cursor: default
+}
+
+.picker--time {
+    min-width: 100%;
+    max-width: 320px
+}
+
+.picker--time .picker__holder {
+    background: #fff
+}
+
+@media screen and (max-width: 30em) {
+    .picker--time .picker__holder {
+        font-size: 14px
+    }
+}
+
+.picker--time .picker__box {
+    padding: 0;
+    position: relative
+}
+
+.picker__box {
+    padding: 20px !important;
+    line-height: 35px !important
+}

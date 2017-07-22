@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/static/css/messenger.css"/>
+</head>
+<body>
+<div class="container container-fluid">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <div class="row">
+                <div class="col-md-3">
+                    <table class="table table-responsive">
+                        <tbody id="messenger-contacts">
+                        <tr><td>C1</td></tr>
+                        <tr><td>C2</td></tr>
+                        <tr><td>C3</td></tr>
+                        <tr><td>C4</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-7">
+                    <div id="chat-history">
+                    </div>
+                    <div class="chat-tools">
+                        <div class="row">
+                            <div class="col-xs-9"><textarea id="message-content" class="messenger textarea"></textarea></div>
+                            <div class="col-xs-3"><button id="btn-message-send" class="btn btn-default">Send</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+<script src="/static/js/messenger.js"></script>
+<script>
+    new Messenger().start();
+</script>
+</html>

@@ -1,0 +1,177 @@
+{% extends "base.html" %}
+
+{% block additionalCss %}
+<link href="/static/css/emPlayer.css" rel="stylesheet" xmlns="http://www.w3.org/1999/html">
+<link href="/static/css/more.css" rel="stylesheet">
+
+{% endblock additionalCss %}
+
+
+{% block additionalScripts %}
+
+<script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
+<script src="/static/js/emPlayer.js"></script>
+
+<script type=text/javascript>
+    $(function () {
+        $('.emo').bind('click', function () {
+            $('.emo').hide();
+            var t = ("You chosed :" + $(this).attr("id"));
+            $("#emoname").text(t);
+            $.getJSON('/emo_count', {
+                imgid: $(this).attr("id")
+            }, function (data) {
+                $("#emo_id").text(data.emo_id);
+                $("#emo_name").text(data.emo_name);
+                if (confirm("Do you want to know how many people choose this? Join in us to get the answer") == true) {
+                    if (document.all) {
+                        document.getElementById("signup_alert").click();
+                    }
+                    else {
+                        var e = document.createEvent("MouseEvents");
+                        e.initEvent("click", true, true);
+                        document.getElementById("signup_alert").dispatchEvent(e);
+                    }
+                }
+                else {
+                    window.location = "/";
+                }
+            });
+            return false;
+        });
+    });
+
+    $(window).ready(function () {
+        var qurl = "https://soundcloud.com/user-604911604/when-i-needed-you-carly-rae-jepsen-demo";
+        onlyPlayTrack(qurl);
+    });
+</script>
+
+{% endblock additionalScripts %}
+
+{% block body %}
+<body id="landing" class="landing is-home">
+{% endblock body %}
+
+{% block content %}
+<div class="hero">
+    <video autoplay="autoplay" loop="" poster="/static/images/landing-video.jpg">
+        <source src="/static/images/landing-video.mp4" type="video/mp4">
+    </video>
+
+    <section class="header-ctas container">
+        <h1 style="opacity: 1;">
+            Is music an important part of your life?
+            <p>Do you want to know how it could make you feel a lot better?</p>
+        </h1>
+    </section>
+    <button style="opacity: 1;" class="learn" id="learnMore">Learn More</button>
+</div>
+
+<section class="landing-question bg-white" id="learn-more">
+    <header class="intro">
+
+        <div class="container">
+            <h1>Music Therapy</h1>
+            <p>
+                Music therapy is a research-based practice and profession in which music is used to actively
+                support people as they strive to improve their health,
+                functioning and wellbeing.
+                <br>
+                Music therapists incorporate a range of music
+                making methods within and through a therapeutic relationship.
+                <br>
+
+                They are employed in a variety of sectors including health, community, aged care, disability, early
+                childhood, and private practice.
+
+                <br>Music therapy is different from music education and entertainment as it
+                focuses on health, functioning and wellbeing.
+
+                <br>
+                Music therapists are committed to supporting people of any age
+                and ability regardless of musical skill, culture or background.
+
+            </p>
+
+        </div>
+    </header>
+</section>
+
+<section class="landing-question bg-grey">
+    <header class="intro">
+
+        <div class="container">
+            <h1>How do you feel when you listen to this piece of music</h1>
+
+
+            <div id="emPlayer">
+                <!--ROBIN, please play this url -->
+                <!--https://soundcloud.com/user-604911604/when-i-needed-you-carly-rae-jepsen-demo"-->
+                <!--<form id="searchUrlForm" class="form-group" sytle="">-->
+                <!--<input type="text" id="queryUrl" class="form-control" placeholder="URL" style="width: 400px;"-->
+                <!--autofocus-->
+                <!--value="https://soundcloud.com/user-604911604/when-i-needed-you-carly-rae-jepsen-demo">-->
+                <!--<input type="submit" id="submitUrlBtn" value="Search">search</input>-->
+                <!--</form>-->
+                <!--PLEASE DELETE ABOVE TEST CODE-->
+
+                <!--https://soundcloud.com/user-604911604/when-i-needed-you-carly-rae-jepsen-demo-->
+
+                <!--<div class="col-xs-3 col-sm-1" style="padding: 0;">-->
+                <!--<img src="/static/images/cover.png" class="img-responsive img-thumbnail" id="trackCover">-->
+                <!--</div>-->
+                <div class="col-xs-9 col-sm-11" style="padding: 0;">
+                    <div class="col-xs-12 col-sm-12">
+                        <span id="trackInfo">Sample Info</span>
+                    </div>
+                    <div class="col-xs-7 col-sm-10">
+                        <span id="currentTime">00:00</span>/<span id="duration">00:00</span>
+                    </div>
+                    <div class="btn btn-group col-xs-5 col-sm-2" style="padding: 0px;">
+                        <button type="button" id="playBtn"></button>
+                        <button type="button" id="muteBtn"></button>
+                    </div>
+                    <div class="col-xs-12 col-sm-12">
+                        <progress id="seekBar" value="0" max="1" style="width: 100%;"></progress>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="center">
+                <!--<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/264675652&amp;color=6bbe98&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>-->
+
+
+                <div class="emo" id="joy">
+                    <button style="background: url(/static/images/emotion/joyous.png);"/>
+                    <p>Joy</p></div>
+                <div class="emo" id="peaceful">
+                    <button style="background: url(/static/images/emotion/cool.png);"/>
+                    <p>Peaceful</p></div>
+                <div class="emo" id="sadness">
+                    <button style="background: url(/static/images/emotion/scared.png);"/>
+                    <p>Sadness</p></div>
+                <div class="emo" id="angry">
+                    <button style="background: url(/static/images/emotion/anguished.png);"/>
+                    <p>Angry</p></div>
+                <div class="emo" id="longing">
+                    <button style="background: url(/static/images/emotion/interesting.png);"/>
+                    <p>Longing</p></div>
+                <div class="emo" id="satisfied">
+                    <button style="background: url(/static/images/emotion/fab.png);"/>
+                    <p>Satisfied</p></div>
+
+            </div>
+            <label id="emoname" style="font-family:courier;"></label>
+
+        </div>
+    </header>
+</section>
+
+
+{% endblock content %}
+
+{% block footer %}
+{{ super() }}
+{% endblock footer %}

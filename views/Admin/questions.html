@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.js"
+            integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../../static/css/bootstrap-editable.css">
+    <script src="../../static/js/bootstrap-editable.js"></script>
+    <style>
+        .some_class {
+            width: 480px;
+        }
+    </style>
+
+</head>
+
+<body style="background: #f1f3f3">
+<br>
+{% for x in all_questions %}
+<tr>
+    <td>{{loop.index}}:</td>
+    <td>
+        <a id="">
+            <b>{{x}}</b>
+        </a>
+
+    </td>
+</tr>
+<br>
+{% endfor %}
+<button type="button" class="btn btn-success">submit</button>
+<button type="button" class="btn btn-success">cancel</button>
+<script>
+    $.fn.editable.defaults.mode = 'inline';
+    $("a").editable({
+        type: 'textarea',
+        pk: 1,
+        title: 'Enter Questionnaire',
+        tpl: "<input type='textarea' style='width: 600px'>"
+    });
+
+</script>
+</body>
+</html>

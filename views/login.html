@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+        <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="{{ gauth_key }}">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+</head>
+<body>
+    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+<div class="fb-login-button" data-max-rows="1" data-size="medium" data-scope="public_profile,email" data-show-faces="false" data-auto-logout-link="false" onlogin="onFbLogin"></div>
+</body>
+<script src="/static/js/jquery.js"></script>
+<script src="/static/js/app.js"></script>
+<script>
+      function onSignIn(googleUser) {
+        // The ID token you need to pass to your backend:
+        var id_token = googleUser.getAuthResponse().id_token;
+          App.login_guath(id_token);
+      }
+</script>
+
+<div id="fb-root"></div>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '{{ fb_key }}',
+      xfbml      : true,
+      version    : 'v2.7'
+    });
+      FB.getLoginStatus(onFbLogin);
+  };
+
+
+
+  function onFbLogin(result) {
+      if(result.status == 'connected') {
+          App.login_fb(result.authResponse.accessToken, result.authResponse.userID);
+      }
+  }
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+</html>

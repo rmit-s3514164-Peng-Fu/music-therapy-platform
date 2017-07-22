@@ -1,0 +1,47 @@
+<div class="row">
+    <div class="col-md-4">
+        <div id="question-list"></div>
+    </div>
+    <div class="col-md-8">
+        <!-- question area -->
+        <div style="display: none;" id="question-area" class="panel panel-default">
+            <div id="category-title" class="panel-heading">Panel heading without title</div>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p id="question-prompt"></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="pull-right">
+                            <button class="btn mint" id="btn-often">Often</button>
+                            <button class="btn mint" id="btn-sometimes">Sometimes</button>
+                            <button class="btn mint" id="btn-rarely">Rarely</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="question-response-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"></h4>
+      </div>
+      <div class="modal-body">
+        <p id="question-response-text-often"></p>
+        <p id="question-response-text-sometimes"></p>
+        <p id="question-response-text-rarely"></p>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal" id="question-ok">OK</button>
+      </div>
+    </div>
+  </div>
+</div>

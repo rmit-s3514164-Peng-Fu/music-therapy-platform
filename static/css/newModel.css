@@ -1,0 +1,244 @@
+/*.modal_header {*/
+    /*display: none;*/
+	/*overflow: scroll;*/
+	/*-webkit-overflow-scroll: touch;*/
+	/*z-index: 30;*/
+	/*background: rgba(39, 41, 43, 0.985);*/
+	/*padding: 44px 0;*/
+	/*height: 100%;*/
+	/*position: absolute;*/
+	/*top: 0px;*/
+	/*right: 0px;*/
+	/*bottom: 0px;*/
+	/*left: 0px;*/
+	/*-webkit-transform: translate3d(0, 0, 0);*/
+	/*-moz-transform: translate3d(0, 0, 0);*/
+	/*-ms-transform: translate3d(0, 0, 0);*/
+	/*-o-transform: translate3d(0, 0, 0);*/
+	/*transform: translate3d(0, 0, 0)*/
+/*}*/
+
+/*.modal_header h1 {*/
+	/*color: #fff;*/
+	/*padding-bottom: .5em;*/
+	/*border-bottom: 2px solid #434a4d*/
+/*}*/
+/*!*this is for contact us *!*/
+/*.contact-us {*/
+	/*font-size: 18px;*/
+	/*line-height: 30px*/
+/*}*/
+/*.contact-us li {*/
+	/*position: relative;*/
+	/*padding-left: 30px*/
+/*}*/
+/*.contact-us li+li {*/
+	/*margin-top: 1em*/
+/*}*/
+/*.contact-us i {*/
+	/*position: absolute;*/
+	/*top: 0;*/
+	/*left: 0;*/
+	/*display: inline-block;*/
+	/*width: 20px;*/
+	/*text-align: center*/
+/*}*/
+/*.contact-us ul {*/
+	/*margin-bottom: 2em*/
+/*}*/
+/*!*end of contact us *!*/
+
+/*!* Modal Content *!*/
+/*.modal-content_header {*/
+    /*position: relative;*/
+    /*background-color: #fefefe;*/
+    /*margin: auto;*/
+    /*padding: 0;*/
+    /*border: 1px solid #888;*/
+    /*width: 80%;*/
+    /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);*/
+    /*-webkit-animation-name: animatetop;*/
+    /*-webkit-animation-duration: 0.4s;*/
+    /*animation-name: animatetop;*/
+    /*animation-duration: 0.4s*/
+/*}*/
+
+/*.icon-x_question:before {*/
+    /*content: "\f10a";*/
+/*}*/
+
+/*!* Add Animation *!*/
+/*@-webkit-keyframes animatetop {*/
+    /*from {top:-300px; opacity:0}*/
+    /*to {top:0; opacity:1}*/
+/*}*/
+
+/*@keyframes animatetop {*/
+    /*from {top:-300px; opacity:0}*/
+    /*to {top:0; opacity:1}*/
+/*}*/
+
+/*!* The Close Button *!*/
+/*.close_header {*/
+    /*color: white;*/
+    /*float: right;*/
+    /*font-size: 28px;*/
+    /*font-weight: bold;*/
+/*}*/
+
+/*.close_header:hover,*/
+/*.close_header:focus {*/
+    /*color: #000;*/
+    /*text-decoration: none;*/
+    /*cursor: pointer;*/
+/*}*/
+
+/*.modal-header_header {*/
+    /*padding: 44px 0;*/
+    /*background-color: #5cb85c;*/
+    /*color: white;*/
+/*}*/
+
+/*.modal-body_header {padding: 2px 16px;}*/
+
+/*.modal-footer_header {*/
+    /*padding: 2px 16px;*/
+    /*background-color: #5cb85c;*/
+    /*color: white;*/
+/*}*/
+
+/*.close-newmodel {*/
+	/*color: #434a4d;*/
+	/*position: absolute;*/
+	/*top: 0;*/
+	/*right: 0;*/
+	/*font-size: 24px;*/
+	/*cursor: pointer;*/
+	/*-webkit-transition: color 250ms ease;*/
+	/*-moz-transition: color 250ms ease;*/
+	/*transition: color 250ms ease*/
+/*}*/
+/*.icon-x{*/
+	/*display: inline-block;*/
+		/*font-family: "barrel";*/
+	/*font-style: normal;*/
+	/*font-weight: normal;*/
+	/*font-variant: normal;*/
+	/*line-height: 1;*/
+	/*text-decoration: inherit;*/
+	/*text-rendering: optimizeLegibility;*/
+	/*text-transform: none;*/
+	/*-moz-osx-font-smoothing: grayscale;*/
+	/*-webkit-font-smoothing: antialiased;*/
+	/*font-smoothing: antialiased*/
+/*}*/
+
+/*.icon-x:before {*/
+	/*content: "\f10a"*/
+/*}*/
+
+
+/*!*this is for login page *!*/
+/*.row {*/
+	/*margin-top: 30px*/
+/*}*/
+
+/*.header-ctas .lg {*/
+	/*max-width: 960px*/
+/*}*/
+
+/*.header-ctas{*/
+    /*content: "";*/
+	/*display: table;*/
+	/*clear: both*/
+/*}*/
+/*.header-ctas {*/
+	/*position: relative;*/
+	/*z-index: 3;*/
+	/*margin: 30px auto !important*/
+/*}*/
+
+/*.header-ctas h1{*/
+    /*font-size: 26px;*/
+	/*margin-bottom: 1em*/
+/*}*/
+
+/*.header-ctas .cta {*/
+	/*display: block;*/
+	/*padding: 30px;*/
+	/*border: 2px solid #fff;*/
+	/*border-radius: 4px;*/
+	/*margin: 0 3%;*/
+	/*text-align: center*/
+/*}*/
+
+/*@media screen and (min-width:48em) {*/
+	/*body.landing .header-ctas {*/
+		/*margin: 30px auto 60px !important*/
+	/*}*/
+/*}*/
+/*.header-ctas .cta {*/
+	/*display: block;*/
+	/*padding: 30px;*/
+	/*border: 2px solid #fff;*/
+	/*border-radius: 4px;*/
+	/*margin: 0 3%;*/
+	/*text-align: center*/
+/*}*/
+
+/*.header-ctas .cta+.cta {*/
+	/*margin-top: 20px*/
+/*}*/
+/*@media screen and (min-width:48em) {*/
+	/*body.landing .header-ctas .cta {*/
+		/*float: left;*/
+		/*width: 44%;*/
+		/*-webkit-transition: background 250ms ease;*/
+		/*-moz-transition: background 250ms ease;*/
+		/*transition: background 250ms ease*/
+	/*}*/
+	/*body.landing .header-ctas .cta:hover {*/
+		/*background: rgba(255, 255, 255, 0.15)*/
+	/*}*/
+	/*body.landing .header-ctas .cta+.cta {*/
+		/*margin-top: 0;*/
+		/*float: right*/
+	/*}*/
+/*}*/
+/*.header-ctas .cta img {*/
+	/*margin: 30px auto;*/
+	/*max-width: 80%*/
+/*}*/
+
+/*.header-ctas .cta h1 {*/
+	/*margin: 0;*/
+	/*font-size: 32px*/
+/*}*/
+
+/*.header-ctas .cta h2 {*/
+	/*font-size: 32px;*/
+	/*margin-bottom: .5em*/
+/*}*/
+
+/*.header-ctas .cta p {*/
+	/*font-size: 22px*/
+/*}*/
+
+/*!*this is new login page*!*/
+/*.sm {*/
+	/*max-width: 460px*/
+/*}*/
+/*.sign-up{*/
+	/*margin-top: 30px*/
+/*}*/
+
+
+
+
+
+
+
+
+
+
+

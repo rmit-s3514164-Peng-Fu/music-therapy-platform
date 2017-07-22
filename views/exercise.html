@@ -1,0 +1,255 @@
+{% extends "base.html" %}
+{% block title %} Music Therapy - Activity - Memory {% endblock title%}
+{% block additionalCss %}
+<link href="/static/css/emPlayer.css" rel="stylesheet">
+<link href="/static/css/more.css" rel="stylesheet">
+
+{% endblock additionalCss %}
+
+{% block additionalScripts %}
+<script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
+<script src="/static/js/emPlayer.js"></script>
+<script src="/static/js/activity.js"></script>
+<script src="/static/js/memory.js"></script>
+
+{% endblock additionalScripts %}
+
+{% block body %}
+<body id="landing" class="landing is-activity">
+{% endblock body %}
+
+{% block content %}
+
+						<section class="landing-question bg-grey">
+							<!-- <header class="intro"> -->
+								
+
+						<section class="illustrated-features bg-grey">
+						
+						<div class="actTab">	
+<ul class="nav nav-actTabs">
+  <li id="tabStep1" class="active"><a href="#" >Step1</a></li>
+  <li id="tabStep2"><a href="#" >Step2</a></li>
+   <li id="tabStep3"><a href="#" >Step3</a></li>
+    <li id="tabStep4"><a href="#" >Step4</a></li>
+     <li id="tabStep5"><a href="#" >Step5</a></li>
+</ul>
+</div>
+
+<!-- STEP1 -->
+							<div class="container" id="step1">
+
+								<h1>Step 1: Pick one song</h1>
+								<p class="desc">
+									Pick one song from playlist. Need more text here about the relaxation part<br>
+						<!-- 
+							<audio controls="true" id="audStep1" onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.play(); }, 3000)" src="audio/chooseSong.wav" type="audio/mpeg" > -->
+									<audio controls="true" id="audStep1"  src="audio/chooseSong.wav" type="audio/mpeg" >
+								<!-- </audio> -->
+								</p>
+
+
+								<ol>
+								<li class="side side1">
+									<div class="content">
+										<h2>­Explanation one</h2>
+										<iframe src="https://embed.spotify.com/?uri=spotify%3Auser%3A1247824100%3Aplaylist%3A1rccOTymUcLs7ovYT12s9p" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
+									</div>
+									</li>
+								
+								<li class="side side2">
+									<div class="content">
+										<h2>­Song name: </h2>
+										<p>Auto generate song title here</p>
+									</div>
+									</li>
+
+								</ol>
+
+								<ul class="fading-steps">
+								
+										<h2>NEXT</h2>
+										<p><a class="btn gray lg" href="#" id="gotoStep2">NEXT</a></p>
+									
+								</ul>
+							</div>
+
+
+<!-- STEP2 -->
+
+<div class="container" id="step2">
+								<h1>Step 2: Write it down</h1>
+								<p class="desc">
+									Write down about what you feel, start from one word.<br>
+							
+							<audio controls="true" id="audStep2">	
+								<source src="audio/writeFeels.wav" type="audio/mpeg"></audio>
+								
+							</p>
+<div class="tempIn">
+	<style>
+											.tempIn input {
+												width: 20%!important;
+												border: 2px solid gray!important;
+												color: gray !important}
+											</style>
+
+<p>in one word: </p>
+<input type="text" id="oneWord" >
+</div>
+
+<div id="writeMore">
+	<style>
+											#writeMore input {
+												width: 50%!important;
+												border: 2px solid gray!important;
+												color: gray !important}
+											</style>
+
+<p> write more: </p><input type="textarea" row="3" id="moreWord"></div>
+
+
+<div id="distracted">
+	<p> </p>
+<audio controls="true" id="audStep2a">	
+								<source src="audio/distracted.wav" type="audio/mpeg"></audio>
+		
+		<p>Do you feel Distracted?</p>
+
+								<!-- <div class="range-slider round" data-slider>
+  <span class="range-slider-handle" role="slider" tabindex="0"></span>
+  <span class="range-slider-active-segment"></span>
+  <input type="hidden"> -->
+<!-- </div> -->
+
+
+ </div>
+
+<div id="frustrated">
+								<p>  </p>
+<audio controls="true" id="audStep2b" type="audio/mpeg"></audio>
+								
+								
+							
+
+								<ul class="fading-steps">
+
+										<h2>Frustrated?</h2>
+										<p><a class="btn gray lg" href="#" id="gotoStep1">YES</a>
+										<a class="btn gray lg" href="#" id="gotoStep3">NO</a></p>
+									
+								</ul>
+							</div>
+							</div>
+
+
+<!-- STEP3 -->
+
+<div class="container" id="step3">
+								<h1>Step 3: Decide on song</h1>
+								<p class="desc">
+									I want you to decide if you want to listen to the same song in more comfortable position
+
+									<audio controls="true" id="audStep3" src="audio/decide.wav"></audio>
+
+									</p>
+
+<audio id="audStep3a" src="audio/decidedNo.wav"></audio>
+<ul class="fading-steps">
+
+										<h2>Decide on this song?</h2>
+
+										<p><a class="btn gray lg" href="#" id="goBacktoStep1">NO</a>
+										<a class="btn gray lg" href="#" id="gotoStep4">YES</a></p>
+								
+								</ul>
+
+								</div>
+
+
+<!-- STEP4 -->
+
+<div class="container" id="step4">
+								<h1>Step 4: Re-listen your song</h1>
+								<p class="desc">
+									Listen again to the song in more comfortable position
+									</p>
+									<audio controls="true" id="audStep4" src="audio/decidedYes.wav"></audio>
+
+
+<p>CHOSEN SONG WILL BE PLAYED OVER HERE</p>
+
+
+<p>after song done, this audio will play</p>
+<audio controls="true" id="audStep4a" src="audio/thisTime.wav"></audio>
+<ul class="fading-steps">
+
+										<!-- <h2>Decide on this song?</h2> -->
+
+										<p>
+										<a class="btn gray lg" href="#" id="gotoStep5">FINALLY</a></p>
+								
+								</ul>
+
+								</div>
+
+<!-- STEP5 -->
+
+<div class="container" id="step5">
+								<h1>Step 5: Writing Exercise</h1>
+								<p class="desc">
+									Writing Exercise
+
+								
+
+									</p>
+										<audio controls="true" id="audStep5" src="audio/wEx.wav"></audio>
+
+<ul class="fading-steps">
+
+										<h2>Back to the start?</h2>
+
+										<p>
+										<a class="btn gray lg" href="#" id="gotoStep1Again">STEP 1</a></p>
+								
+								</ul>
+
+								</div>
+
+							<iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/268635054&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+						</section>
+
+
+
+
+
+</section>
+{% endblock content %}
+{% block footer %}
+{{ super() }}
+<!--music player-->
+<div class="container" id="emPlayer">
+    <div class="col-xs-3 col-sm-1" style="padding: 0;">
+        <img src="/static/images/cover.png" class="img-responsive img-thumbnail" id="trackCover">
+    </div>
+    <div class="col-xs-9 col-sm-11" style="padding: 0;">
+        <div class="col-xs-12 col-sm-12">
+            <span id="trackInfo">&nbsp</span>
+        </div>
+        <div class="col-xs-7 col-sm-10">
+            <span id="currentTime">00:00</span>/<span id="duration">00:00</span>
+        </div>
+        <div class="btn btn-group col-xs-5 col-sm-2" style="padding: 0px;">
+            <button type="button" id="loopBtn"></button>
+            <button type="button" id="playBtn"></button>
+            <button type="button" id="muteBtn"></button>
+            <button type="button" id="listBtn"></button>
+        </div>
+        <div class="col-xs-12 col-sm-12">
+            <progress id="seekBar" value="0" max="1" style="width: 100%;"></progress>
+        </div>
+    </div>
+</div>
+{% endblock footer %}
+
+

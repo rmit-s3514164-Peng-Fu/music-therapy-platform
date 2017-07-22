@@ -1,0 +1,17 @@
+{% extends "activity/base_editor.html" %}
+{% block header %}
+<div class="row">
+    <div class="col-md-12">
+        <div class="activity-toolbox">
+            <button class="btn mint" id="btn-goto-storyboard">Edit Steps</button>
+        </div>
+    </div>
+</div>
+
+
+{% endblock header %}
+{% block adminMode %}
+<script>
+    admin_mode = true;
+</script>
+{% endblock adminMode %}

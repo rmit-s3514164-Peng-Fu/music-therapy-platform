@@ -1,0 +1,419 @@
+{% extends "base.html" %}
+{% block title %} Music Therapy - Activity - Memory {% endblock title%}
+{% block additionalCss %}
+<link href="/static/css/emPlayer.css" rel="stylesheet">
+<link href="/static/css/more.css" rel="stylesheet">
+
+{% endblock additionalCss %}
+
+{% block additionalScripts %}
+<script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
+<script src="/static/js/emPlayer.js"></script>
+<script src="/static/js/activity.js"></script>
+<script src="/static/js/memory.js"></script>
+
+{% endblock additionalScripts %}
+
+{% block body %}
+<body id="landing" class="landing is-activity">
+{% endblock body %}
+
+{% block content %}
+<section class="landing-question bg-grey">
+
+    <section class="illustrated-features bg-grey">
+
+        <div class="actTab">
+            <ul class="nav nav-actTabs">
+                <li id="tabStep1" class="active"><a href="#">Step1</a></li>
+                <li id="tabStep2"><a href="#">Step2</a></li>
+                <li id="tabStep3"><a href="#">Step3</a></li>
+                <li id="tabStep4"><a href="#">Step4</a></li>
+                <li id="tabStep5"><a href="#">Step5</a></li>
+                <li id="tabStep6"><a href="#">Step6</a></li>
+            </ul>
+        </div>
+
+        <!-- STEP1 -->
+        <div class="container" id="step1">
+
+            <h1>Step 1: Introduction</h1>
+            <!--<strong>audio:</strong><br>-->
+            <!--Let’s begin by thinking of a piece of music that you listen to which connects to a memory you have from your-->
+            <!--life.-->
+            <!--If nothing is coming to mind straight away, you might need to go through the most frequently played songs in-->
+            <!--your-->
+            <!--device and check each one to see if it reminds you of a particular experience.-->
+
+            <!--</p>-->
+
+            <p class="desc"> "It might be a song that you associate with a friend, or with a celebration, or
+                with
+                a break up, or
+                a funeral."</p>
+            <br>
+
+
+            <ul class="fading-steps">
+
+                <!--<h2>NEXT</h2>-->
+                <div class="inforow"><p><a class="btn mint lg" href="#" id="gotoStep2">NEXT</a></p></div>
+
+            </ul>
+        </div>
+
+
+        <!-- STEP2 -->
+
+        <div class="playlist container" id="step2">
+            <h1>Step 2: Think and Choose a Song</h1>
+            <!--<p class="audio">-->
+            <!--<strong>audio:</strong><br>-->
+            <!--Once you have found a song that reminds you of a particular time in your life.-->
+            <!--Write the song name or keywords in the box here and click SEARCH-->
+            <!--</p>-->
+            <!--<p class="audio">-->
+            <!--<strong>audio:</strong><br>-->
+            <!--Go through the list and find your song. Once you have found it, click on it<br>-->
+            <!--write down the memory that you have attached to it into this box (or box here)-->
+
+            <!--</p>-->
+            <div class="inforow">
+
+                <!--search form-->
+                <input type="text" id="queryInfo" class="form-control" placeholder="Title, owner or author"
+                       style="width: 400px;">
+                <!--<a class="btn mint lg" href="#" id="submitInfoBtn">Search</a>-->
+
+                <input type="submit" id="submitInfoBtn" value="Search">
+
+            </div>
+
+
+            <div class="inforow">
+
+                <div class="container">
+                    <h2>Search Result</h2>
+
+                    <ul type="1" id="searchResult">
+                        <li>test write 1</li>
+                        <li>test write 2</li>
+                        <li>test write 3</li>
+                    </ul>
+                </div>
+            </div>
+            <!--&lt;!&ndash;searchinfoForm&ndash;&gt;-->
+            <!--<div class="half">-->
+            <!--<div class="content">-->
+            <!--<h2>­Write about it: </h2>-->
+            <!--<div class="tempIn">-->
+            <!--<p>in one word: </p>-->
+            <!--<input type="text" id="oneWord"></div>-->
+            <!--</div>-->
+            <!--</div>-->
+
+            <p class="desc"> "For example, you might have chosen the song “Time of Your Life” by Greenday,
+                because it connects to your graduation from Secondary School."</p>
+
+            <div class="inforow">
+                <p>
+                    <a class="btn mint lg" href="#" id="gotoStep1">BACK</a>
+                    <a class="btn mint lg" href="#" id="gotoStep3">NEXT</a></p>
+            </div>
+
+        </div>
+
+
+        <!-- STEP3 -->
+
+        <div class="container" id="step3">
+            <h1>Step 3: Sit and Relax</h1>
+            <!--<p class="audio">-->
+            <!--<strong>audio:</strong><br>-->
+            <!--Now, sit still and reduce all of the other distractions that are around you<br>-->
+            <!--</p>-->
+            <p class="desc">stop playing games, or chatting with someone for example</p>
+
+            <!--<p class="audio"><br>-->
+            <!--<strong>audio:</strong><br>-->
+            <!--Then close your eyes, if you feel it’s safe to do so and really listen to the song.-->
+            <!--<br>-->
+            <!--write down the memory that you have attached to it textbox below-->
+            <!--</p>-->
+            <p class="desc">Notice what memories come to you and jot them down as you’re listening.</p>
+            <br>
+            <span class="notes"> [Song should be playing at this rate]</span>
+            <br><br>
+            <!--<p class="audio">-->
+            <!--<strong>audio played after the song finished:</strong><br>-->
+            <!--If there are a lot of memories, keep listening to the song a few times until you have written-->
+            <!--them all down.-->
+
+            <!--</p>-->
+
+            <!--<span class="notes">[textarea appear]</span><br>-->
+            <textarea name="Text1" cols="40" rows="5" class="txtArea"></textarea>
+
+
+            <p class="desc">Make sure you write about how it makes you feel in your body – For example: tired,
+                or
+                energized.</p>
+            <br>
+
+
+            <div class="inforow">
+                <p>
+                    <!--<a class="btn mint lg" href="#" id="gotoStep2">BACK</a>-->
+                    <a class="btn mint lg" href="#" id="gotoStep4">NEXT</a></p></div>
+
+        </div>
+
+
+        <!-- STEP4 -->
+
+        <div class="playlist container" id="step4">
+            <h1>Step 4: Name The Memory</h1>
+
+            <!--<p class="audio">-->
+            <!--<strong>audio:</strong><br>-->
+            <!--Once you have listed everything that comes to your mind, read through what you have written and-->
+            <!--try to give a-->
+            <!--title to the memories.-->
+            <!--Make it something that captures the essence or the key part of what you associate with the song.-->
+            <!--</p>-->
+
+            <p class="tip"> "For example it might be “The best party of my life”, or “I really miss my Dad”.
+                If you can, try and choose a title that references both the memory itself and the qualities
+                attached to it."</p>
+            <br>
+
+
+            <div class="half">
+
+                <div class="content">
+                    <h2>Your Playlist</h2>
+                    <div class="container" id="playList">
+                        <ul type="1" id="plist">
+                            <li>test write 1</li>
+                            <li>test write 2</li>
+                            <li>test write 3</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="half">
+                <div class="tempIn">
+                    <h2>­Name the memory: </h2>
+                    <p><br><input type="text" id="playlistTitle" class="txtBox" placeholder="e.g. I miss my dad">
+                        <a class="btn mint lg" href="#" id="savePlaylistBtn">SAVE</a>
+                   <!--<input type="button" id="savePlaylistBtn" class="btn gray lg" value="SAVE" style="height: 54px; width: 82px;">-->
+                    </p>
+                </div>
+            </div>
+
+
+            <div class="inforow">
+                <p><a class="btn mint lg" href="#" id="">BACK</a>
+
+
+                    <a class="btn mint lg" href="#" id="gotoStep5">NEXT</a></p>
+            </div>
+
+
+        </div>
+
+        <!-- STEP5 -->
+
+        <div class="container" id="step5">
+            <h1>Step 5: Now Focus on Emotion</h1>
+
+            <!--<p class="audio">-->
+            <!--<strong>audio:</strong><br>-->
+            <!--Now listen to the song again and this time really focus on the emotions that come up when you-->
+            <!--listen to the song-->
+            <!--and think about these memories.-->
+            <!--You might have already written some of this in your description, but this time you are really-->
+            <!--focussing on the-->
+            <!--feelings.-->
+            <!--</p>-->
+            <p class="desc">"Notice what the feelings are, and whether they get stronger or stay the same or
+                start to go away
+                once you’ve
+                been listening for a while."</p>
+
+            <span class="notes"> [Song should be playing at this rate]</span>
+
+
+            <!--<p class="audio">-->
+            <!--<strong>audio:</strong><br>-->
+            <!--Choose one of the emotions below and move the bar along to describe how intensely you felt this-->
+            <!--emotion, whether-->
+            <!--it-->
+            <!--was really strong or only a little bit.-->
+            <!--You can choose more than one word if you need to.-->
+
+            <!--</p>-->
+
+            <!--<p><span class="notes"> [These are mock up emotions, can be updated later]</span></p>-->
+
+            <div class="center">
+
+                <div class="emo">
+                    <button id="joy" style="background: url(/static/images/emotion/joyous.png);"/>
+                    <p>Joy</p></div>
+                <div class="emo">
+                    <button id="peaceful" style="background: url(/static/images/emotion/cool.png);"/>
+                    <p>Peaceful</p></div>
+                <div class="emo">
+                    <button id="sadness" style="background: url(/static/images/emotion/scared.png);"/>
+                    <p>Sadness</p></div>
+
+                <div class="emo">
+                    <button id="angry" style="background: url(/static/images/emotion/anguished.png);"/>
+                    <p>Angry</p></div>
+                <div class="emo">
+                    <button id="longing"
+                            style="background: url(/static/images/emotion/interesting.png);"/>
+                    <p>Longing</p></div>
+                <div class="emo">
+                    <button id="satisfied" style="background: url(/static/images/emotion/fab.png);"/>
+                    <p>Satisfied</p></div>
+
+            </div>
+
+            <p>How much? <input type="range" min="0" max="5" value="0" step="1"
+                                onchange="showValue(this.value)"/>
+                <span id="range">0</span></p>
+
+            <script type="text/javascript">
+                function showValue(newValue) {
+//                    var print = "";
+//                    switch (newValue) {
+//                        case  0:
+//                            print = "none";
+//                            break;
+//                        case  1:
+//                            print = " almost none";
+//                            break;
+//                        case  2:
+//                            print = " a little bit";
+//                            break;
+//                        case  3:
+//                            print = " more";
+//                            break;
+//                        case  4:
+//                            print = " strong";
+//                            break;
+//                        case  5:
+//                            print = " very strong";
+//
+//
+//                    }
+//                    alert(print);
+                    document.getElementById("range").innerHTML = newValue;
+                }
+            </script>
+
+            <!--<span class="notes"> [Press button and slide the bar, any button pressed with bar value greater than 0 will be filled in below list]</span>-->
+            <!--<br><br>-->
+
+            <div class="half">
+                <p>List of emotion user wrote in previous textarea</p>
+                <p>Joy 5<br>
+                    Peaceful 8<br>
+                    Longing 8</p>
+
+            </div>
+            <div class="half"><br><Strong>Your Strongest Emotion:</Strong><br>
+                <span class="notes">[This section can be removed if not needed]</span>
+                <p>Peaceful<br>
+                    Longing</p></div>
+
+            <div class="inforow">
+            <p class="tip"> "Look at the types of emotions that evoked you the most."</p>
+            <br>
+
+            <span class="notes"> [After the song ended]</span>
+            <br>
+            </div>
+            <!--<p class="audio">-->
+            <!--<strong>audio: </strong><br>-->
+            <!--Once you finished, look at the types of emotions it evoked for you.-->
+            <!--If you found that it was really strong, that’s an important message for you.-->
+            <!--It means that song brings up big feelings and so you need to choose when you want to have that-->
+            <!--kind of emotional-->
+            <!--experience.-->
+            <!--</p>-->
+            <br><br>
+
+            <div class="inforow">
+                <p><a class="btn mint lg" href="#" id="a">BACK</a>
+
+                    <a class="btn mint lg" href="#" id="b">NEXT</a></p>
+            </div>
+        </div>
+        <div class="container" id="step6">
+
+            <h1>What Next?</h1>
+            <!--<strong>audio:</strong><br>-->
+            <!--Let’s begin by thinking of a piece of music that you listen to which connects to a memory you have from your-->
+            <!--life.-->
+            <!--If nothing is coming to mind straight away, you might need to go through the most frequently played songs in-->
+            <!--your-->
+            <!--device and check each one to see if it reminds you of a particular experience.-->
+
+            <!--</p>-->
+
+            <p class="desc"> Sometimes it feels good to have strong emotional response to music, but if you are trying to study,
+        or just playing music in the background while you’re catching up with friends, you might not want to play the
+        music that connects to memories.<br><br>
+</p>
+            <p class="desc">
+        In the next exercise, write down when it would be best to listen to this song.<br>
+        Alone – With Others<br>
+        Feeling down – Feeling happy<br>
+        Concentrating on listening to music – In the background while doing other things<br></p>
+            <br>
+
+
+           <div class="inforow">
+               <input type="button" value="FINISH" class="btn mint lg">
+
+           </div>
+        </div>
+
+<iframe width="100%" height="650" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/268651125&amp;auto_play=false&amp;hide_related=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;visual=false"></iframe>
+
+    </section>
+
+
+
+</section>
+{% endblock content %}
+{% block footer %}
+{{ super() }}
+<!--music player-->
+<div class="container" id="emPlayer">
+    <div class="col-xs-3 col-sm-1" style="padding: 0;">
+        <img src="/static/images/cover.png" class="img-responsive img-thumbnail" id="trackCover">
+    </div>
+    <div class="col-xs-9 col-sm-11" style="padding: 0;">
+        <div class="col-xs-12 col-sm-12">
+            <span id="trackInfo">&nbsp</span>
+        </div>
+        <div class="col-xs-7 col-sm-10">
+            <span id="currentTime">00:00</span>/<span id="duration">00:00</span>
+        </div>
+        <div class="btn btn-group col-xs-5 col-sm-2" style="padding: 0px;">
+            <button type="button" id="loopBtn"></button>
+            <button type="button" id="playBtn"></button>
+            <button type="button" id="muteBtn"></button>
+            <button type="button" id="listBtn"></button>
+        </div>
+        <div class="col-xs-12 col-sm-12">
+            <progress id="seekBar" value="0" max="1" style="width: 100%;"></progress>
+        </div>
+    </div>
+</div>
+{% endblock footer %}
+

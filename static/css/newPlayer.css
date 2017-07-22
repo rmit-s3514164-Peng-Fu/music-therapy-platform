@@ -1,0 +1,68 @@
+#emPlayer{
+    background-color: #FAFAFA;
+    /*border-style: solid;*/
+    /*border-width: 1px;*/
+    /*border-color: #449d44;*/
+    padding: 5px;
+    margin: auto;
+}
+
+#trackCover{
+    height: 65px;
+    width: 65px;
+}
+
+#playList{
+    background-color: #FAFAFA;
+    padding: 5px;
+    margin: auto;
+}
+
+#loopBtn{
+    border: 0px;
+    height: 18px;
+    width: 18px;
+    background-size: 100%;
+    background-color: #FAFAFA;
+    background-image: url("/static/images/UnloopIcon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#playBtn{
+    border: none;
+    height: 18px;
+    width: 18px;
+    background-size: 100%;
+    background-color: #FAFAFA;
+    background-image: url("/static/images/PlayIcon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#muteBtn{
+    border: none;
+    height: 18px;
+    width: 18px;
+    background-size: 100%;
+    background-color: #FAFAFA;
+    background-image: url("/static/images/SpeakerIcon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#listBtn{
+    border: none;
+    height: 18px;
+    width: 18px;
+    background-size: 100%;
+    background-color: #FAFAFA;
+    background-image: url("/static/images/ListIcon.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#loopBtn:active, #playBtn:active, #muteBtn:active, #listBtn:active{
+    position: relative;
+    top: 2px;;
+}

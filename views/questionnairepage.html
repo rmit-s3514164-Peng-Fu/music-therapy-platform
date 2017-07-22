@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="Stylesheet" href="/static/css/model.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/js/questionnairepage.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h2>Questionnaire Page</h2>
+    <div class="row">
+        <div class="col-sm-4">
+            <h4>You can answer Any category questions </h4></div>
+    </div>
+</div>
+
+<div class="container">
+    {% set questioncount =1 %}
+    {%set innerquescount =1 %}
+    {% for ques in question %}
+    <div class="panel-group">
+        <div class="panel panel-default">
+            {% for key in ques %}
+            {% if key == "title" %}
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" href="#collapse{{questioncount}}">{{ques[key]}}</a>
+                </h4>
+            </div>
+            {% endif %}
+            {% if key == "questions" %}
+            <div id="collapse{{questioncount}}" class="panel-collapse collapse">
+                {% for question in ques[key]%}
+                {%for q in question%}
+                {% if q == "prompt"%}
+                <div class="panel-body">
+                    <h4 class="panel-title">
+                        <p>{{question[q]}}</p>
+                    </h4>
+                </div>
+                {%endif %}
+                {%if q=="activity_id"%}
+                {%set activityID=question[q]%}
+                {%endif%}
+                {%endfor%}
+                {%for q in question%}
+                {% if q == "text_rarely"%}
+                <div class="radio-inline">
+                    <label><input type="radio" name="optradio" value="{{question[q]|safe}}"
+                                  id="rarely{{questioncount}}{{innerquescount}}"
+                                  onclick="setchoose('question{{questioncount}}{{innerquescount}}',this.value,'False')">Rarely</label>
+                </div>
+                {% elif q== "text_sometimes"%}
+
+                <div class="radio-inline">
+                    <label><input type="radio" name="optradio" value="{{question[q]|safe}}"
+                                  id="sometime{{questioncount}}{{innerquescount}}"
+                                  onclick="setchoose('question{{questioncount}}{{innerquescount}}',this.value,'True')">Some-Time</label>
+                </div>
+
+                {% elif q =="text_often"%}
+                <div class="radio-inline">
+                    <label><input type="radio" name="optradio" value="{{question[q]}}"
+                                  id="often{{questioncount}}{{innerquescount}}"
+                                  onclick="setchoose('question{{questioncount}}{{innerquescount}}',this.value,'False')">Often</label>
+                </div>
+                {%elif q== "activity_id"%}
+                <input hidden type="text" id="question{{questioncount}}{{innerquescount}}activity"
+                       value="{{question[q]}}">
+                {%endif%}
+                {% endfor %}
+                <button id="rest{{questioncount}}{{innerquescount}}" type="button" class="btn btn-warning"
+                        onclick="reset('{{questioncount}}{{innerquescount}}')">Reset
+                </button>
+                <button type="button" class="btn btn-success" id="button{{questioncount}}{{innerquescount}}"
+                        onclick="showfeedback('button{{questioncount}}{{innerquescount}}')">Submit
+                </button>
+                {% endfor %}
+
+            </div>
+            {%endif%}
+            {% set innerquescount =innerquescount+1 %}
+            {% endfor %}
+        </div>
+    </div>
+    {% set questioncount = questioncount + 1%}
+    {% endfor %}
+</div>
+
+<!-- The Modal activity -->
+<div id="myModal-activity" class="modal_question">
+    <!-- Modal content -->
+    <div class="modal-content_question">
+        <div class="modal-header_question">
+            <span id="close-activity" class="close">x</span>
+            <h2>Choose Feedback</h2>
+        </div>
+        <div class="modal-body_question">
+            <p id="content"></p>
+            <div id="buttonYesorNo">
+                <button id="buttonforYes" type="button" class="btn btn-primary" onclick="goactivity()">Yes</button>
+                <button id="buttonforNo" type="button" class="btn btn-warning" onclick="backtoquestionnaire()">No
+                </button>
+            </div>
+        </div>
+
+        <div class="modal-footer_question">
+            <h3>Thank you ^_^</h3>
+        </div>
+    </div>
+</div>
+
+
+</body>

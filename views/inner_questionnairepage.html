@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="Stylesheet" href="/static/css/model.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/js/QuestionJs.js"></script>
+</head>
+<body>
+
+<div class="container">
+	<h2>Questionnaire Page</h2>
+	<div class="row">
+	 <div class="col-sm-4">
+		<h4>You can answer all the queston or just </h4></div>
+		<div class="col-sm-4">
+    <button id = "pick" type="button" class="btn btn-primary" onclick="pickone()">Pick One</button>
+	</div>
+</div>
+<p></p>
+<div class="container">
+  <!--This it for question 1~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
+  <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse1">Music and Relaxing</a>
+        </h4>
+      </div>
+
+ 	  <div id="collapse1" class="panel-collapse collapse">
+
+         <div class="panel-body">
+			<h4 class="panel-title">
+ 	         	<p>Music helps me to relax </p>
+        	</h4>
+        	<p></p>
+         	<form>
+    			<input type="radio" id = "q11" name = "ques1" value="never" onClick="setchoose(this.value)"> Never
+    			<input type="radio" id = "q12" name = "ques1" value = "rarely" onClick="setchoose(this.value)">  Rarely
+    			<input type="radio" id = "q13" name = "ques1" value = "sometime" onClick="setchoose(this.value)"> Some-Times
+    			<input type="radio" id = "q14" name = "ques1" value= "often" onClick="setchoose(this.value)"> Often
+    			<input type="radio" id = "q15" name = "ques1" value ="always" onClick="setchoose(this.value)"> Always
+    		</form>
+				<button id = "question1_reset" type="button" class="btn btn-warning"value="question1"onclick="reset(this.value)">Reset </button>
+				<button id = "question1" type="button" class="btn btn-success"value="question1"onclick="showresult(this.value)">Submit </button>
+        </div>
+
+        <div class="panel-body">
+			<h4 class="panel-title">
+ 	         	<p>When I try to use music to feel better I actually end up feeling worse
+				</p>
+        	</h4>
+        	<p></p>
+         	<form>
+    			<input type="radio" id = "q21" name = "ques2" value="never" onClick="setchoose(this.value)"> Never
+    			<input type="radio" id = "q22" name = "ques2" value = "rarely" onClick="setchoose(this.value)">  Rarely
+    			<input type="radio" id = "q23" name = "ques2" value = "sometime" onClick="setchoose(this.value)"> Some-Times
+    			<input type="radio" id = "q24" name = "ques2" value= "often" onClick="setchoose(this.value)"> Often
+    			<input type="radio" id = "q25" name = "ques2" value ="always" onClick="setchoose(this.value)"> Always
+    		</form>
+				<button id = "question2_reset" type="button" class="btn btn-warning"value="question2"onclick="reset(this.value)">Reset </button>
+				<button id = "question2" type="button" class="btn btn-success"value="question2"onclick="showresult(this.value)">Submit </button>
+       	</div>
+      </div>
+	</div>
+</div>
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~This is for question 2 ~~~~~~~~~~~~~~~~~~~~~~-->
+
+	<div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse2">Music and Memories</a>
+        </h4>
+      </div>
+
+      <div id="collapse2" class="panel-collapse collapse">
+
+         <div class="panel-body">
+      <h4 class="panel-title">
+            <p>Listening to certain songs helps me remember positive times in my life
+        </p>
+          </h4>
+          <p></p>
+          <form>
+          <input type="radio" id = "q31" name = "ques3" value="never" onClick="setchoose(this.value)"> Never
+          <input type="radio" id = "q32" name = "ques3" value = "rarely" onClick="setchoose(this.value)">  Rarely
+          <input type="radio" id = "q33" name = "ques3" value = "sometime" onClick="setchoose(this.value)"> Some-Times
+          <input type="radio" id = "q34" name = "ques3" value= "often" onClick="setchoose(this.value)"> Often
+          <input type="radio" id = "q35" name = "ques3" value ="always" onClick="setchoose(this.value)"> Always
+        </form>
+				<button id = "question3_reset" type="button" class="btn btn-warning"value="question3"onclick="reset(this.value)">Reset </button>
+				<button id = "question3" type="button" class="btn btn-success"value="question3"onclick="showresult(this.value)">Submit </button>
+        </div>
+
+        <div class="panel-body">
+      <h4 class="panel-title">
+            <p>It can be hard to stop listening to music that connects me to bad memories
+        </p>
+          </h4>
+          <p></p>
+          <form>
+          <input type="radio" id = "q41" name = "ques4" value="never" onClick="setchoose(this.value)"> Never
+          <input type="radio" id = "q42" name = "ques4" value = "rarely" onClick="setchoose(this.value)">  Rarely
+          <input type="radio" id = "q43" name = "ques4" value = "sometime" onClick="setchoose(this.value)"> Some-Times
+          <input type="radio" id = "q44" name = "ques4" value= "often" onClick="setchoose(this.value)"> Often
+          <input type="radio" id = "q45" name = "ques4" value ="always" onClick="setchoose(this.value)"> Always
+        </form>
+				<button id = "question4_reset" type="button" class="btn btn-warning"value="question4"onclick="reset(this.value)">Reset </button>
+				<button id = "question4" type="button" class="btn btn-success"value="question4"onclick="showresult(this.value)">Submit </button>
+        </div>
+      </div>
+   </div>
+</div>
+
+<!--```````````````````This is for question 3~~~~~~~~~~~~~~~~~~~~~-->
+	<div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse3">Music and Mood</a>
+        </h4>
+      </div>
+
+      <div id="collapse3" class="panel-collapse collapse">
+
+         <div class="panel-body">
+      <h4 class="panel-title">
+            <p>I feel happier after playing or listening to music
+        </p>
+          </h4>
+          <p></p>
+          <form>
+          <input type="radio" id = "q51" name = "ques5" value="never" onClick="setchoose(this.value)"> Never
+          <input type="radio" id = "q52" name = "ques5" value = "rarely" onClick="setchoose(this.value)">  Rarely
+          <input type="radio" id = "q53" name = "ques5" value = "sometime" onClick="setchoose(this.value)"> Some-Times
+          <input type="radio" id = "q54" name = "ques5" value= "often" onClick="setchoose(this.value)"> Often
+          <input type="radio" id = "q55" name = "ques5" value ="always" onClick="setchoose(this.value)"> Always
+        </form>
+				<button id = "question5_reset" type="button" class="btn btn-warning"value="question5"onclick="reset(this.value)">Reset </button>
+				<button id = "question5" type="button" class="btn btn-success"value="question5"onclick="showresult(this.value)">Submit </button>
+        </div>
+
+        <div class="panel-body">
+      <h4 class="panel-title">
+            <p>I listen to songs over and over even though it makes me feel worse
+        </p>
+          </h4>
+          <p></p>
+          <form>
+          <input type="radio" id = "q61" name = "ques6" value="never" onClick="setchoose(this.value)"> Never
+          <input type="radio" id = "q62" name = "ques6" value = "rarely" onClick="setchoose(this.value)">  Rarely
+          <input type="radio" id = "q63" name = "ques6" value = "sometime" onClick="setchoose(this.value)"> Some-Times
+          <input type="radio" id = "q64" name = "ques6" value= "often" onClick="setchoose(this.value)"> Often
+          <input type="radio" id = "q65" name = "ques6" value ="always" onClick="setchoose(this.value)"> Always
+        </form>
+				<button id = "question6_reset" type="button" class="btn btn-warning"value="question6"onclick="reset(this.value)">Reset </button>
+				<button id = "question6" type="button" class="btn btn-success"value="question6"onclick="showresult(this.value)">Submit </button>
+        </div>
+      </div>
+   </div>
+</div>
+
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~This if for question 4!~~~~~~~~~~~~~~~~~~~~~~~~-->
+	<div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse4">Music and Energy</a>
+        </h4>
+      </div>
+
+      <div id="collapse4" class="panel-collapse collapse">
+
+         <div class="panel-body">
+      <h4 class="panel-title">
+            <p>Music gives me the energy to get going
+        </p>
+          </h4>
+          <p></p>
+          <form>
+          <input type="radio" id = "q71" name = "ques7" value="never" onClick="setchoose(this.value)"> Never
+          <input type="radio" id = "q72" name = "ques7" value = "rarely" onClick="setchoose(this.value)">  Rarely
+          <input type="radio" id = "q73" name = "ques7" value = "sometime" onClick="setchoose(this.value)"> Some-Times
+          <input type="radio" id = "q74" name = "ques7" value= "often" onClick="setchoose(this.value)"> Often
+          <input type="radio" id = "q75" name = "ques7" value ="always" onClick="setchoose(this.value)"> Always
+        </form>
+				<button id = "question7_reset" type="button" class="btn btn-warning"value="question7"onclick="reset(this.value)">Reset </button>
+				<button id = "question7" type="button" class="btn btn-success"value="question7"onclick="showresult(this.value)">Submit </button>
+        </div>
+
+        <div class="panel-body">
+      <h4 class="panel-title">
+            <p>Music leads me to do things I should not do
+        </p>
+          </h4>
+          <p></p>
+          <form>
+          <input type="radio" id = "q81" name = "ques8" value="never" onClick="setchoose(this.value)"> Never
+          <input type="radio" id = "q82" name = "ques8" value = "rarely" onClick="setchoose(this.value)">  Rarely
+          <input type="radio" id = "q83" name = "ques8" value = "sometime" onClick="setchoose(this.value)"> Some-Times
+          <input type="radio" id = "q84" name = "ques8" value= "often" onClick="setchoose(this.value)"> Often
+          <input type="radio" id = "q85" name = "ques8" value ="always" onClick="setchoose(this.value)"> Always
+        </form>
+				<button id = "question8_reset" type="button" class="btn btn-warning"value="question8"onclick="reset(this.value)">Reset </button>
+				<button id = "question8" type="button" class="btn btn-success"value="question8"onclick="showresult(this.value)">Submit </button>
+        </div>
+      </div>
+   </div>
+</div>
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~This is for question 5~~~~~~~~~~~~~~~~~-->
+	<div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse5">Music and Friends</a>
+        </h4>
+      </div>
+
+      <div id="collapse5" class="panel-collapse collapse">
+
+         <div class="panel-body">
+      <h4 class="panel-title">
+            <p>Music helps me to connect with other people who are like me
+        </p>
+          </h4>
+          <p></p>
+          <form>
+          <input type="radio" id = "q91" name = "ques8" value="never" onClick="setchoose(this.value)"> Never
+          <input type="radio" id = "q92" name = "ques8" value = "rarely" onClick="setchoose(this.value)">  Rarely
+          <input type="radio" id = "q93" name = "ques8" value = "sometime" onClick="setchoose(this.value)"> Some-Times
+          <input type="radio" id = "q94" name = "ques8" value= "often" onClick="setchoose(this.value)"> Often
+          <input type="radio" id = "q95" name = "ques8" value ="always" onClick="setchoose(this.value)"> Always
+        </form>
+				<button id = "question9_reset" type="button" class="btn btn-warning"value="question9"onclick="reset(this.value)">Reset </button>
+				<button id = "question9" type="button" class="btn btn-success"value="question9"onclick="showresult(this.value)">Submit </button>
+        </div>
+
+        <div class="panel-body">
+      <h4 class="panel-title">
+            <p>I hide in my music because nobody understands me, and it blocks people out
+        </p>
+          </h4>
+          <p></p>
+          <form>
+          <input type="radio" id = "q101" name = "ques9" value="never" onClick="setchoose(this.value)"> Never
+          <input type="radio" id = "q102" name = "ques9" value = "rarely" onClick="setchoose(this.value)">  Rarely
+          <input type="radio" id = "q103" name = "ques9" value = "sometime" onClick="setchoose(this.value)"> Some-Times
+          <input type="radio" id = "q104" name = "ques9" value= "often" onClick="setchoose(this.value)"> Often
+          <input type="radio" id = "q105" name = "ques9" value ="always" onClick="setchoose(this.value)"> Always
+        </form>
+				<button id = "question10_reset" type="button" class="btn btn-warning"value="question10"onclick="reset(this.value)">Reset </button>
+				<button id = "question10" type="button" class="btn btn-success"value="question10"onclick="showresult(this.value)">Submit </button>
+
+        </div>
+      </div>
+   </div>
+</div>
+
+<!-- The Modal activity -->
+<div id="myModal-activity" class="modal_question">
+
+  <!-- Modal content -->
+  <div class="modal-content_question">
+    <div class="modal-header_question">
+      <span id = "close-activity" class="close">x</span>
+     <h2>Choose Feedback</h2>
+    </div>
+    <div class="modal-body_question">
+      <p id ="content"></p>
+			<div id = "buttonYesorNo">
+			<button  id = "buttonforYes"type="button" class="btn btn-primary" onclick="goactivity()">Yes </button>
+			<button id = "buttonforNo" type="button" class="btn btn-warning" onclick="backtoquestionnaire()">No </button>
+		</div>
+		</div>
+
+    <div class="modal-footer_question">
+      <h3>Thank you ^_^</h3>
+    </div>
+  </div>
+</div>
+
+	</div>
+</div>
+</body>

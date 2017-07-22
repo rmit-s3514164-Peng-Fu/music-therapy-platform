@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css"/>
+    <script src="/static/js/jquery.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/forgotpassword.js"></script>
+    <meta charset="UTF-8">
+    <title>searchplaylist</title>
+</head>
+<body style="background: #f1f3f3">
+<div class="container">
+    <h3>Please input key words: </h3>
+</div>
+<div class="container">
+    <form accept-charset="UTF-8" action="/admin/searchplaylist" enctype="multipart/form-data" method="post"
+          novalidate="novalidate">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <input type="text" name="keywords" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                         <button class="btn btn-default" type="submit">Go!</button>
+                    </span>
+                </div><!-- /input-group -->
+            </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+    </form>
+</div>
+<div class="container">
+    <br>
+    <table id="playlist_table" class="table">
+        <thead>
+        <tr>
+
+
+            {%for alltrack in alltracklist%}
+            {%if loop.index == 1%}
+            <th>No.</th>
+            {% for type,val in alltracklist[alltrack].items() %}
+            {% for key,value in val.items() %}
+            <th>{{key}}</th>
+            {%endfor%}
+            {%endfor%}
+            {%endif%}
+            {%endfor%}
+        </tr>
+        </thead>
+        <tbody id="playlist">
+        {%for alltrack in alltracklist%}
+        <tr>
+            <td>{{loop.index}}:</td>
+            {% for type,val in alltracklist[alltrack].items() %}
+            {% for key,value in val.items() %}
+            <td>
+                <b>{{value}}</b>
+            </td>
+            {%endfor%}
+
+            {% endfor %}
+        </tr>
+        <br>
+        {%endfor%}
+        </tbody>
+    </table>
+    <h3>{{infor_message}}</h3>
+</div>
+</body>
+
+</html>

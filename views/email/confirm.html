@@ -1,0 +1,8 @@
+<p>Dear {{ User.u_firstname }},</p>
+<p>Welcome to <b>SEP</b>!</p>
+<p>To confirm your account please <a href="{{ url_for('auth.confirm', token=token, _external=True) }}">click here</a>.</p>
+<p>Alternatively, you can paste the following link in your browser's address bar:</p>
+<a>{{ url_for('auth.confirm', token=token, _external=True) }}</a>
+<p>Sincerely,</p>
+<p>The SEP Team</p>
+<p><small>Note: replies to this email address are not monitored.</small></p>

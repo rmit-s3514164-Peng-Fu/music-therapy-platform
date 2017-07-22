@@ -1,0 +1,74 @@
+<div class="row">
+    <div class="col-md-6" id="category-list">
+    <button class="btn btn-default new-category">New Category...</button>
+    </div>
+</div>
+
+<div class="modal fade" id="new-category-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">New Category</h4>
+      </div>
+      <div class="modal-body">
+          <div class="form-group">
+          <label for="new-category-title">Category name</label>
+          <input id="new-category-title" class="form-control" />
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="new-category-add">Add</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="new-question-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">New Question</h4>
+      </div>
+      <div class="modal-body">
+      <input type="hidden" id="new-question-category" name="category_id"/>
+      <input type="hidden" id="new-question-id" name="id"/>
+          <div class="form-group">
+          <label for="new-question-prompt">Prompt</label>
+          <input id="new-question-prompt" name="prompt" class="form-control" />
+          </div>
+      <div class="form-group">
+          <input id="new-question-positive" name="is_positive" type="checkbox" checked/>
+          <label for="new-question-positive">Is this a positive question?</label>
+      </div>
+          <div class="form-group">
+          <label for="new-question-often">Response for often</label>
+          <textarea class="form-control" name="text_often" id="new-question-often"></textarea>
+          </div>
+          <div class="form-group">
+          <label for="new-question-sometimes">Response for sometimes</label>
+          <textarea class="form-control" name="text_sometimes" id="new-question-sometimes"></textarea>
+          </div>
+          <div class="form-group">
+          <label for="new-question-rarely">Response for rarely</label>
+          <textarea class="form-control" name="text_rarely" id="new-question-rarely"></textarea>
+          </div>
+          <div class="form-group">
+          <label for="new-question-activity">Activity</label>
+              <select class="form-control" name="activity_id" id="new-question-activity">
+                  <option value="null" selected>None</option>
+                  {% for activity in activities %}
+                      <option value="{{ activity['id'] }}">{{ activity['name'] }}</option>
+                  {% endfor %}
+              </select>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="new-question-add">Add</button>
+      </div>
+    </div>
+  </div>
+</div>

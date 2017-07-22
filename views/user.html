@@ -1,0 +1,276 @@
+{% extends "base.html" %}
+
+{% block additionalCss %}
+<link href="/static/css/emPlayer.css" rel="stylesheet">
+<link href="/static/css/more.css" rel="stylesheet">
+{% endblock additionalCss %}
+
+{% block additionalScripts %}
+
+<script type="text/javascript" src="/static/js/canvasjs.min.js"></script>
+<script type="text/javascript" src="/static/js/chart.js"></script>
+<script type="text/javascript" src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
+<script type="text/javascript" src="/static/js/user.js"></script>
+<script src="/static/js/emPlayer.js"></script>
+{% endblock additionalScripts %}
+
+{% block title %}
+Music Therapy - User Control Panel
+{% endblock title %}
+
+{% block body %}
+<body id="landing" class="landing is-user">
+{% endblock body %}
+
+{% block content %}
+<section class="landing-question bg-grey">
+    <header class="intro">
+        <div class="container">
+            <h1>User Control Panel</h1>
+
+            <ul class="steps">
+                <li class="first">
+                    <a id="gotoEdPro" href="#"> </a>
+
+                    <h2>Edit Profile</h2>
+                    <p>Edit your profile</p>
+
+                </li>
+                <li class="middle">
+                    <a id="gotoSecPl" href="#"></a>
+
+                    <h2>Playlist Editor</h2>
+                    <p>You can configure your playlist here</p>
+
+                </li>
+                <li class="last">
+                    <a id="gotoQuest" href="#"> </a>
+                    <h2>Questionnaire</h2>
+                    <p>Start a questionnaire</p>
+
+                </li>
+            </ul>
+        </div>
+    </header>
+</section>
+
+<!--<section class="playlist">-->
+<!--<h1>Playlist Control</h1>-->
+
+
+<!--</section>-->
+
+<section class="statistic">
+    <!--<h1 id="chart">Statistic: what do others feel?</h1>-->
+    <div class="content">
+        <!--<h2>­What do others feel</h2>-->
+        <ul class="tempIn">
+            <style>
+                .tempIn input {
+                    width: 20% !important;
+                    border: 2px solid gray !important;
+                    color: black !important
+                }
+            </style>
+            <div id="chartContainer" style="height: 500px;">
+            </div>
+        </ul>
+    </div>
+    <!--<ol>-->
+    <!--<li class="side side1">-->
+    <!--<div class="content">-->
+    <!--&lt;!&ndash;<h2>­What do others feel</h2>&ndash;&gt;-->
+    <!--<ul class="tempIn">-->
+    <!--<style>-->
+    <!--.tempIn input {-->
+    <!--width: 20% !important;-->
+    <!--border: 2px solid gray !important;-->
+    <!--color: black !important-->
+    <!--}-->
+    <!--</style>-->
+    <!--<div id="chartContainer" style="height: 300px; width:80%;">-->
+
+    <!--</div>-->
+    <!--</ul>-->
+    <!--</div>-->
+    <!--</li>-->
+    <!--<div class="content">-->
+
+
+    <!--</div>-->
+    <!--</li>-->
+    <!--</ol>-->
+</section>
+
+<section class="editProfile illustrated-features bg-grey" id="secEdPro">
+    <div class="container">
+        <form action="/update_user_profile" role="form" method="post">
+            <h1>Edit Profile Information</h1>
+            <p class="desc">
+                Fill in new update, don't forget to SAVE<br>
+            </p>
+
+            <div class="inforow">
+                <div class="half">
+                    <span>First Name: </span><input type="text" id="new_firstname" name="new_firstname" class="edTxt"
+                                                    value="{{u_firstname}}">
+                </div>
+                <div class="half">
+                    <span>Last Name: </span><input type="text" id="new_lastname" name="new_lastname" class="edTxt"
+                                                   value="{{u_lastname}}">
+                </div>
+            </div>
+            <div class="inforow">
+                <div class="half">
+                    <span>Password: </span><input type="password" id="password" name="password" class="edTxt"
+                                                  required="required"
+                                                  placeholder="If you won't like to change your password, please fill in with your current password.">
+                </div>
+                <div class="half">
+                    <span>Re-enter Password: </span><input type="password" id="new_password" name="new_password"
+                                                           class="edTxt" required="required"
+                                                           placeholder="If you won't like to change your password, please fill in with your current password again.">
+                </div>
+            </div>
+            <div class="inforow">
+                <div class="half">
+                    <span>Email: </span><input class="edTxt" type="text" id="u_email" name="u_email" class=""
+                                               value="{{u_email}}" disabled>
+                </div>
+                <div class="half">
+                    <span>Preferred genres: </span><input type="text" id="new_genre" name="new_genre" class="edTxt"
+                                                          value="{{u_genre}}">
+                </div>
+            </div>
+             <div class="inforow">
+                <input type="submit" value="Save Change" id="saveProfile" class="saveBtn">
+            </div>
+        </form>
+    </div>
+</section>
+
+<section class="playlist illustrated-features bg-grey" id="secPlaylist">
+    <div class="container">
+        <h1>Playlist Control</h1>
+        <p class="desc">
+            Select your playlist to EDIT or CREATE new one<br>
+        </p>
+        <div class="half">
+
+            <select name="listPlaylist" id="listPlayList">
+                <option value="" selected="selected"></option>
+                {% for playlist in playlists %}
+                {% set playlist_id = playlist['id'] %}
+                <option value="{{playlist_id}}">{{playlist['name']}}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="half">
+            <input type="button" value="Create" id="createPlaylist" class="edBtn">
+            <a href="/"><input type="button" value="Delete" id="deletePlaylist" class="edBtn"></a>
+            <input type="button" value="Edit" id="editPlaylist" class="edBtn">
+
+            <!--if something selected hide below, otherwise only show below-->
+
+        </div>
+
+        <div class="container" id="editPl">
+            <div class="half">
+
+                <label>Playlist Name:</label>
+                <input type="text" placeholder="New Playlist Name" class="playlistName" id="playlistName">
+
+                <label>Description:</label>
+                <textarea type="textarea" class="playlistDesc" id="playlistDesc" name="playlistDesc">
+                </textarea>
+                <div class="content">
+
+                    <div class="container" id="playList">
+                        <h2>Your Playlist Name</h2>
+                        <ul type="1" id="plist">
+                            <li>test write 1</li>
+                            <li>test write 2</li>
+                            <li>test write 3</li>
+                            <li>test write 1</li>
+                            <li>test write 2</li>
+                            <li>test write 3</li>
+                            <li>test write 1</li>
+                            <li>test write 2</li>
+                            <li>test write 3</li>
+                            <li>test write 1</li>
+                            <li>test write 2</li>
+                            <li>test write 3</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="half">
+
+                <label>Enter new search:</label>
+                <div class="search">
+
+                    <input type="text" id="queryInfo" class="form-control" placeholder="Title, owner or author">
+                    <input type="submit" id="submitInfoBtn" value="Search">
+                </div>
+                <label>Search Result:</label>
+                <div class="searchResult">
+                    <ul type="1" id="searchResult">
+                        <li>test write 1</li>
+                        <li>test write 2</li>
+                        <li>test write 3</li>
+                        <li>test write 1</li>
+                        <li>test write 2</li>
+                        <li>test write 3</li>
+                        <li>test write 1</li>
+                        <li>test write 2</li>
+                        <li>test write 3</li>
+                        <li>test write 1</li>
+                        <li>test write 2</li>
+                        <li>test write 3</li>
+                        <li>test write 1</li>
+                        <li>test write 2</li>
+                        <li>test write 3</li>
+                    </ul>
+                </div>
+            </div>
+            <input type="button" value="Save Change" id="saveBtn">
+        </div>
+    </div>
+</section>
+
+<section id="secQuest" class="illustrated-features bg-white" style="display: block;">
+    <iframe height="600" id="iframepage" name="iframepage" width="960" scrolling="auto" align="top"
+            frameborder="0" src="{{url_for('questionnairepage')}}">
+    </iframe>
+</section>
+{% endblock content %}
+{% block footer %}
+<div class="container" id="emPlayer">
+    <div class="col-xs-3 col-sm-1" style="padding: 0;">
+        <img src="/static/images/cover.png" class="img-responsive img-thumbnail" id="trackCover">
+    </div>
+    <div class="col-xs-9 col-sm-11" style="padding: 0;">
+        <div class="col-xs-12 col-sm-12">
+            <span id="trackInfo">&nbsp</span>
+        </div>
+        <div class="col-xs-7 col-sm-10">
+            <span id="currentTime">00:00</span>/<span id="duration">00:00</span>
+        </div>
+        <div class="btn btn-group col-xs-5 col-sm-2" style="padding: 0px;">
+            <button type="button" id="loopBtn"></button>
+            <button type="button" id="playBtn"></button>
+            <button type="button" id="muteBtn"></button>
+            <button type="button" id="listBtn"></button>
+        </div>
+        <div class="col-xs-12 col-sm-12">
+            <progress id="seekBar" value="0" max="1" style="width: 100%;"></progress>
+        </div>
+    </div>
+</div>
+{{ super() }}
+{% endblock footer %}
+
